@@ -1,0 +1,14 @@
+C:\Users\vagrant\Downloads\WeatherApiAndroid-master\WeatherApiAndroid-master\WeatherInfo\obj\WeatherTest\android\assets\WeatherInfo.dll
+C:\Users\vagrant\Downloads\WeatherApiAndroid-master\WeatherApiAndroid-master\WeatherInfo\obj\WeatherTest\android\assets\Geolocator.Plugin.Abstractions.dll
+C:\Users\vagrant\Downloads\WeatherApiAndroid-master\WeatherApiAndroid-master\WeatherInfo\obj\WeatherTest\android\assets\Geolocator.Plugin.dll
+C:\Users\vagrant\Downloads\WeatherApiAndroid-master\WeatherApiAndroid-master\WeatherInfo\obj\WeatherTest\android\assets\Newtonsoft.Json.dll
+C:\Users\vagrant\Downloads\WeatherApiAndroid-master\WeatherApiAndroid-master\WeatherInfo\obj\WeatherTest\android\assets\Java.Interop.dll
+C:\Users\vagrant\Downloads\WeatherApiAndroid-master\WeatherApiAndroid-master\WeatherInfo\obj\WeatherTest\android\assets\Mono.Android.dll
+C:\Users\vagrant\Downloads\WeatherApiAndroid-master\WeatherApiAndroid-master\WeatherInfo\obj\WeatherTest\android\assets\System.Core.dll
+C:\Users\vagrant\Downloads\WeatherApiAndroid-master\WeatherApiAndroid-master\WeatherInfo\obj\WeatherTest\android\assets\System.dll
+C:\Users\vagrant\Downloads\WeatherApiAndroid-master\WeatherApiAndroid-master\WeatherInfo\obj\WeatherTest\android\assets\System.Xml.dll
+C:\Users\vagrant\Downloads\WeatherApiAndroid-master\WeatherApiAndroid-master\WeatherInfo\obj\WeatherTest\android\assets\mscorlib.dll
+C:\Users\vagrant\Downloads\WeatherApiAndroid-master\WeatherApiAndroid-master\WeatherInfo\obj\WeatherTest\android\assets\System.ComponentModel.Composition.dll
+C:\Users\vagrant\Downloads\WeatherApiAndroid-master\WeatherApiAndroid-master\WeatherInfo\obj\WeatherTest\android\assets\System.Runtime.Serialization.dll
+C:\Users\vagrant\Downloads\WeatherApiAndroid-master\WeatherApiAndroid-master\WeatherInfo\obj\WeatherTest\android\assets\System.ServiceModel.Internals.dll
+C:\Users\vagrant\Downloads\WeatherApiAndroid-master\WeatherApiAndroid-master\WeatherInfo\obj\WeatherTest\android\assets\System.Net.Http.dll
