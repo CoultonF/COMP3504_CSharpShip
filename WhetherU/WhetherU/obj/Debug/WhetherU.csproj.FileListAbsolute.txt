@@ -41,4 +41,6 @@ C:\Users\vagrant\Documents\Visual Studio 2015\Projects\COMP3504_CSharpShip\Wheth
 C:\Users\vagrant\Documents\Visual Studio 2015\Projects\COMP3504_CSharpShip\WhetherU\WhetherU\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
 C:\Users\vagrant\Documents\Visual Studio 2015\Projects\COMP3504_CSharpShip\WhetherU\WhetherU\obj\Debug\android\assets\WhetherU.dll.mdb
 C:\Users\vagrant\Documents\Visual Studio 2015\Projects\COMP3504_CSharpShip\WhetherU\WhetherU\obj\Debug\WhetherU.dll.mdb
-C:\Users\vagrant\Documents\Visual Studio 2015\Projects\COMP3504_CSharpShip\WhetherU\WhetherU\bin\Debug\WhetherU.dll.mdb
+C:\Users\vagrant\Desktop\COMP3504_CSharpShip\WhetherU\WhetherU\obj\Debug\WhetherU.csprojResolveAssemblyReference.cache
+C:\Users\vagrant\Desktop\COMP3504_CSharpShip\WhetherU\WhetherU\obj\Debug\WhetherU.dll
+C:\Users\vagrant\Desktop\COMP3504_CSharpShip\WhetherU\WhetherU\obj\Debug\WhetherU.pdb
