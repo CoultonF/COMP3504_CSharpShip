@@ -2,16 +2,11 @@
 <Paths>
   <Jars></Jars>
   <ResolvedResourceDirectories>
-    <ResolvedResourceDirectory>C:\Users\vagrant\Desktop\COMP3504_CSharpShip\WhetherU\WhetherU\obj\Debug\__library_projects__\Auth0Client.Android\library_project_imports\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>C:\Users\vagrant\Desktop\COMP3504_CSharpShip\WhetherU\WhetherU\obj\Debug\__library_projects__\Xamarin.Auth.Android\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\__library_projects__\Auth0Client.Android\library_project_imports\res</ResolvedResourceDirectory>
   </ResolvedResourceDirectories>
-  <ResolvedAssetDirectories>
-    <ResolvedAssetDirectory>C:\Users\vagrant\Desktop\COMP3504_CSharpShip\WhetherU\WhetherU\obj\Debug\__library_projects__\Auth0Client.Android\library_project_imports\assets</ResolvedAssetDirectory>
-    <ResolvedAssetDirectory>C:\Users\vagrant\Desktop\COMP3504_CSharpShip\WhetherU\WhetherU\obj\Debug\__library_projects__\Xamarin.Auth.Android\library_project_imports\assets</ResolvedAssetDirectory>
-  </ResolvedAssetDirectories>
+  <ResolvedAssetDirectories />
   <ResolvedEnvironmentFiles />
   <ResolvedResourceDirectoryStamps>
-    <ResolvedResourceDirectoryStamp>C:\Users\vagrant\Desktop\COMP3504_CSharpShip\WhetherU\WhetherU\obj\Debug\__library_projects__\Auth0Client.Android.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>C:\Users\vagrant\Desktop\COMP3504_CSharpShip\WhetherU\WhetherU\obj\Debug\__library_projects__\Xamarin.Auth.Android.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\__library_projects__\Auth0Client.Android.stamp</ResolvedResourceDirectoryStamp>
   </ResolvedResourceDirectoryStamps>
 </Paths>

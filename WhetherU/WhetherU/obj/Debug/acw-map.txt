@@ -1,3 +1,7 @@
+WhetherU.InstagramLogin, WhetherU;md5f77fb14a419adb30c5718830c7fb2a59.InstagramLogin
+WhetherU.InstagramLogin, WhetherU, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5f77fb14a419adb30c5718830c7fb2a59.InstagramLogin
+WhetherU.InstagramLogin;md5f77fb14a419adb30c5718830c7fb2a59.InstagramLogin
+whetheru.InstagramLogin;md5f77fb14a419adb30c5718830c7fb2a59.InstagramLogin
 WhetherU.MainActivity, WhetherU;md5f77fb14a419adb30c5718830c7fb2a59.MainActivity
 WhetherU.MainActivity, WhetherU, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5f77fb14a419adb30c5718830c7fb2a59.MainActivity
 WhetherU.MainActivity;md5f77fb14a419adb30c5718830c7fb2a59.MainActivity
