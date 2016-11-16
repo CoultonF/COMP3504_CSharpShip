@@ -86,17 +86,59 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Instagram\Instagram.Client\IInstagramClient.cs" />
+    <Compile Include="Instagram\Instagram.Client\InstagramClient.cs" />
+    <Compile Include="Instagram\Instagram.Client\ResponseFetcher.cs" />
+    <Compile Include="Instagram\Instagram.Models\Caption.cs" />
+    <Compile Include="Instagram\Instagram.Models\Comment.cs" />
+    <Compile Include="Instagram\Instagram.Models\Comments.cs" />
+    <Compile Include="Instagram\Instagram.Models\Count.cs" />
+    <Compile Include="Instagram\Instagram.Models\Image.cs" />
+    <Compile Include="Instagram\Instagram.Models\Likes.cs" />
+    <Compile Include="Instagram\Instagram.Models\Location.cs" />
+    <Compile Include="Instagram\Instagram.Models\Media.cs" />
+    <Compile Include="Instagram\Instagram.Models\Meta.cs" />
+    <Compile Include="Instagram\Instagram.Models\Pagination.cs" />
+    <Compile Include="Instagram\Instagram.Models\Realtime.cs" />
+    <Compile Include="Instagram\Instagram.Models\Relationship.cs" />
+    <Compile Include="Instagram\Instagram.Models\Responses\CommentResponse.cs" />
+    <Compile Include="Instagram\Instagram.Models\Responses\CommentsResponse.cs" />
+    <Compile Include="Instagram\Instagram.Models\Responses\IResponse.cs" />
+    <Compile Include="Instagram\Instagram.Models\Responses\LikesResponse.cs" />
+    <Compile Include="Instagram\Instagram.Models\Responses\LocationResponse.cs" />
+    <Compile Include="Instagram\Instagram.Models\Responses\LocationsResponse.cs" />
+    <Compile Include="Instagram\Instagram.Models\Responses\MediaResponse.cs" />
+    <Compile Include="Instagram\Instagram.Models\Responses\MediasResponse.cs" />
+    <Compile Include="Instagram\Instagram.Models\Responses\OAuthResponse.cs" />
+    <Compile Include="Instagram\Instagram.Models\Responses\RelationshipResponse.cs" />
+    <Compile Include="Instagram\Instagram.Models\Responses\SubscriptionsResponse.cs" />
+    <Compile Include="Instagram\Instagram.Models\Responses\TagResponse.cs" />
+    <Compile Include="Instagram\Instagram.Models\Responses\TagsResponse.cs" />
+    <Compile Include="Instagram\Instagram.Models\Responses\TestResponse.cs" />
+    <Compile Include="Instagram\Instagram.Models\Responses\UserResponse.cs" />
+    <Compile Include="Instagram\Instagram.Models\Responses\UsersResponse.cs" />
+    <Compile Include="Instagram\Instagram.Models\Subscription.cs" />
+    <Compile Include="Instagram\Instagram.Models\Tag.cs" />
+    <Compile Include="Instagram\Instagram.Models\User.cs" />
+    <Compile Include="Instagram\Instagram.Models\UserInfo.cs" />
+    <Compile Include="MainScreen.cs" />
     <Compile Include="InstagramLogin.cs" />
-    <Compile Include="MainActivity.cs" />
+    <Compile Include="StartUpActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WhetherU\OAuthSettings.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="GettingStarted.Xamarin" />
+    <None Include="Instagram\Instagram.Client\packages.config" />
+    <None Include="Instagram\Instagram.Models\packages.config" />
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
+    <AndroidResource Include="Resources\layout\LoginPrompt.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">
@@ -119,6 +161,11 @@
     </XamarinComponentReference>
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Content Include="Instagram\Instagram.Client\Instagram.Client.csproj" />
+    <Content Include="Instagram\Instagram.Models\Instagram.Models.csproj" />
+    <Content Include="WhetherU\XamaGram.Models.csproj" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

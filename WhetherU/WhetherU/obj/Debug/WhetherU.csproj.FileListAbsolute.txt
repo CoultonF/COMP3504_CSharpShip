@@ -115,7 +115,6 @@ C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\bin\Debug\Microsoft.Thread
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\bin\Debug\Newtonsoft.Json.xml
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\bin\Debug\System.Net.Http.Extensions.xml
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\bin\Debug\System.Net.Http.Primitives.xml
-C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\WhetherU.csprojResolveAssemblyReference.cache
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\WhetherU.dll
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\WhetherU.pdb
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\android\bin\WhetherU.WhetherU.apk
@@ -124,6 +123,8 @@ C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\res\values\strin
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\res\drawable\icon.png
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\R.cs.flag
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\uploadflags.txt
+C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\res\layout\loginprompt.xml
+C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\bin\Debug\WhetherU.dll.mdb
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\bin\Debug\Java.Interop.dll.mdb
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\bin\Debug\Mono.Android.dll.mdb
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\bin\Debug\mscorlib.dll.mdb
@@ -131,12 +132,12 @@ C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\bin\Debug\System.Component
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\bin\Debug\System.Core.dll.mdb
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\bin\Debug\System.dll.mdb
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\bin\Debug\System.Json.dll.mdb
+C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\bin\Debug\System.Net.dll.mdb
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\bin\Debug\System.Net.Http.dll.mdb
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\bin\Debug\System.Runtime.Serialization.dll.mdb
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\bin\Debug\System.ServiceModel.Internals.dll.mdb
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\bin\Debug\System.Xml.dll.mdb
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\bin\Debug\System.Xml.Linq.dll.mdb
-C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\bin\Debug\WhetherU.dll.mdb
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\android\assets\Java.Interop.dll.mdb
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\android\assets\Mono.Android.dll.mdb
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\android\assets\mscorlib.dll.mdb
@@ -144,13 +145,13 @@ C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\android\assets\S
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\android\assets\System.Core.dll.mdb
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\android\assets\System.dll.mdb
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\android\assets\System.Json.dll.mdb
+C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\android\assets\System.Net.dll.mdb
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\android\assets\System.Net.Http.dll.mdb
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\android\assets\System.Runtime.Serialization.dll.mdb
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\android\assets\System.Xml.dll.mdb
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\android\assets\WhetherU.dll.mdb
-C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\bin\Debug\System.Net.dll.mdb
-C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\android\assets\System.Net.dll.mdb
+C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\WhetherU.csprojResolveAssemblyReference.cache
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\WhetherU.dll.mdb
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\bin\Debug\WhetherU.dll.mdb

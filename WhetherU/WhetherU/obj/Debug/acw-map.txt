@@ -1,11 +1,15 @@
+WhetherU.MainScreen, WhetherU;md5f77fb14a419adb30c5718830c7fb2a59.MainScreen
+WhetherU.MainScreen, WhetherU, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5f77fb14a419adb30c5718830c7fb2a59.MainScreen
+WhetherU.MainScreen;md5f77fb14a419adb30c5718830c7fb2a59.MainScreen
+whetheru.MainScreen;md5f77fb14a419adb30c5718830c7fb2a59.MainScreen
 WhetherU.InstagramLogin, WhetherU;md5f77fb14a419adb30c5718830c7fb2a59.InstagramLogin
 WhetherU.InstagramLogin, WhetherU, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5f77fb14a419adb30c5718830c7fb2a59.InstagramLogin
 WhetherU.InstagramLogin;md5f77fb14a419adb30c5718830c7fb2a59.InstagramLogin
 whetheru.InstagramLogin;md5f77fb14a419adb30c5718830c7fb2a59.InstagramLogin
-WhetherU.MainActivity, WhetherU;md5f77fb14a419adb30c5718830c7fb2a59.MainActivity
-WhetherU.MainActivity, WhetherU, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5f77fb14a419adb30c5718830c7fb2a59.MainActivity
-WhetherU.MainActivity;md5f77fb14a419adb30c5718830c7fb2a59.MainActivity
-whetheru.MainActivity;md5f77fb14a419adb30c5718830c7fb2a59.MainActivity
+WhetherU.StartUpActivity, WhetherU;md5f77fb14a419adb30c5718830c7fb2a59.StartUpActivity
+WhetherU.StartUpActivity, WhetherU, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5f77fb14a419adb30c5718830c7fb2a59.StartUpActivity
+WhetherU.StartUpActivity;md5f77fb14a419adb30c5718830c7fb2a59.StartUpActivity
+whetheru.StartUpActivity;md5f77fb14a419adb30c5718830c7fb2a59.StartUpActivity
 Xamarin.Auth.AndroidAccountStore/SecretAccount, Xamarin.Auth.Android;md550f8a10a740eb4fb6376baab8337ce22.AndroidAccountStore_SecretAccount
 Xamarin.Auth.AndroidAccountStore+SecretAccount, Xamarin.Auth.Android, Version=1.2.2.0, Culture=neutral, PublicKeyToken=null;md550f8a10a740eb4fb6376baab8337ce22.AndroidAccountStore_SecretAccount
 Xamarin.Auth.AndroidAccountStore.SecretAccount;md550f8a10a740eb4fb6376baab8337ce22.AndroidAccountStore_SecretAccount
