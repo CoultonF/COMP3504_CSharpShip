@@ -41,65 +41,90 @@ namespace WhetherU
         /// <value>The Instagram API token.</value>
         public static string Token { get; private set; }
 
+        public async void SaveCredentials(string token)
+        {
+
+            if (!string.IsNullOrWhiteSpace(token))
+            {
+                var InstagramClient = new InstagramClient(token);
+
+                var info = await InstagramClient.GetMyUserAsync();
+
+                Console.WriteLine(info.Data.Username);
+
+                Account account = new Account
+                {
+                    Username = info.Data.Username
+                };
+                account.Properties.Add("Token", token);
+                AccountStore.Create(this).Save(account, "WhetherU");
+            }
+        }
+        
+
+        public async void runApp(String token)
+        {
+
+            var InstagramClient = new InstagramClient(token);
+
+            await InstagramClient.GetMyUserAsync();
+
+            Console.Write(InstagramClient.GetType());
+
+            SetContentView(Resource.Layout.Main);
+
+        }
+
         protected override async void OnCreate(Bundle savedInstanceState)
         {
-            base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.Main);
-            // Set our view from the "main" layout resource
-            var clientId = "33665d08e62942c6b1f484f422bbb7c1";
-            var clientSecret = "ae94378b39e747b0ac5d6f8640636b02 ";
-            var redirectUri = "https://elfsight.com/service/generate-instagram-access-token/";
-            var realtimeUri = "";
 
-            var auth = new OAuth2Authenticator(
-                clientId: clientId,
-                scope: "basic",
-                authorizeUrl: new Uri("https://api.instagram.com/oauth/authorize/"),
-                redirectUrl: new Uri(redirectUri));
-            var token = "";
-            auth.Completed += (s, ee) => {
-                token = ee.Account.Properties["access_token"];
+                base.OnCreate(savedInstanceState);
+                SetContentView(Resource.Layout.Main);
+                // Set our view from the "main" layout resource
+                
+                var clientId = "33665d08e62942c6b1f484f422bbb7c1";
+                var clientSecret = "ae94378b39e747b0ac5d6f8640636b02 ";
+                var redirectUri = "https://elfsight.com/service/generate-instagram-access-token/";
+                var realtimeUri = "";
 
-            };
-            StartActivity(auth.GetUI(this));
-            //PresentViewController(auth.GetUI(), true, null);
-            IEnumerable<Account> accounts = AccountStore.Create(this).FindAccountsForService("Instagram");
-            auth.Completed += async (sender, eventArgs) =>
-            {
-                // We presented the UI, so it's up to us to dimiss it on iOS.
-                //DismissViewController(true, null);
+                var auth = new OAuth2Authenticator(
+                    clientId: clientId,
+                    scope: "basic",
+                    authorizeUrl: new Uri("https://api.instagram.com/oauth/authorize/"),
+                    redirectUrl: new Uri(redirectUri));
+                var token = "";
+                auth.Completed += (s, ee) => {
+                    token = ee.Account.Properties["access_token"];
 
-                if (eventArgs.IsAuthenticated)
+                };
+                StartActivity(auth.GetUI(this));
+
+                auth.Completed += (sender, eventArgs) =>
                 {
-                    // Use eventArgs.Account to do wonderful things
-                    AccountStore.Create(this).Save(eventArgs.Account, "Instagram");
-                    Console.WriteLine(token);
-                    var InstagramClient = new InstagramClient(token);
-                    await InstagramClient.GetMyUserAsync();
-                    Console.Write(InstagramClient.GetType());
-                    SetContentView(Resource.Layout.Main);
-                }
-                else
-                {
-                    // The user cancelled
-                    StartActivity(typeof(StartUpActivity));
-                }
-            };
-            // Create your application here
-            //var clientId = "33665d08e62942c6b1f484f422bbb7c1";
-            //var clientSecret = "ae94378b39e747b0ac5d6f8640636b02 ";
-            //var redirectUri = "https://elfsight.com/service/generate-instagram-access-token/";
-            //var realtimeUri = "";/////
+                    // We presented the UI, so it's up to us to dimiss it on iOS.
+                    //DismissViewController(true, null);
 
-            //InstagramConfig config = new InstagramConfig(clientId, clientSecret, redirectUri, realtimeUri);
+                    if (eventArgs.IsAuthenticated)
+                    {
 
-            //var scopes = new List<OAuth.Scope>();
-            //scopes.Add(InstaSharp.OAuth.Scope.Likes);
-            //scopes.Add(InstaSharp.OAuth.Scope.Comments);
+                        // Use eventArgs.Account to do wonderful things
+                        SaveCredentials(token);
+                        runApp(token);
 
-            //var link = InstaSharp.OAuth.AuthLink(config.OAuthUri + "authorize", config.ClientId, config.RedirectUri, scopes, InstaSharp.OAuth.ResponseType.Code);
+
+                    }
+                    else
+                    {
+                        // The user cancelled
+
+                        StartActivity(typeof(StartUpActivity));
+
+                    }
+                };
+
+            }
+            
             
         }
 
     }
-}

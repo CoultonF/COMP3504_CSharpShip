@@ -22,8 +22,6 @@ namespace Instagram.Client
 				var response = await client.GetAsync(requestUri).ConfigureAwait(false);
 				response.EnsureSuccessStatusCode();
 				var content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-                Console.WriteLine("FLAG FLAG");
-                Console.WriteLine(content);
 				return JsonConvert.DeserializeObject<T>(content);
 			}
 		}
