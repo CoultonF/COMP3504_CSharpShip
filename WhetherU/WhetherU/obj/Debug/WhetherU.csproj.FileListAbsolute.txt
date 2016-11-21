@@ -125,6 +125,7 @@ C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\R.cs.flag
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\uploadflags.txt
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\res\layout\loginprompt.xml
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\bin\Debug\WhetherU.dll.mdb
+C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\WhetherU.csprojResolveAssemblyReference.cache
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\bin\Debug\Java.Interop.dll.mdb
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\bin\Debug\Mono.Android.dll.mdb
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\bin\Debug\mscorlib.dll.mdb
@@ -152,6 +153,5 @@ C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\android\assets\S
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\android\assets\System.Xml.dll.mdb
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\android\assets\WhetherU.dll.mdb
-C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\WhetherU.csprojResolveAssemblyReference.cache
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\WhetherU.dll.mdb
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\bin\Debug\WhetherU.dll.mdb
