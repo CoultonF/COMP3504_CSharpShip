@@ -154,4 +154,3 @@ C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\android\assets\S
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\android\assets\WhetherU.dll.mdb
 C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\obj\Debug\WhetherU.dll.mdb
-C:\Users\vagrant\Desktop\CSharpShip\WhetherU\WhetherU\bin\Debug\WhetherU.dll.mdb
