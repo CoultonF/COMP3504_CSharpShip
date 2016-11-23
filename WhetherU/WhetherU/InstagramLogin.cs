@@ -19,7 +19,7 @@ namespace WhetherU
     public class InstagramLogin : Activity
     {
 
-        public static OAuthSettings XamarinAuthSettings { get; private set; }
+        //public static OAuthSettings XamarinAuthSettings { get; private set; }
 
         /// <summary>
         /// A static intance of IInstagramClient.
@@ -119,7 +119,7 @@ namespace WhetherU
                     {
                         // The user cancelled
 
-                        StartActivity(typeof(StartUpActivity));
+                        StartActivity(typeof(WeatherScreen));
 
                     }
                 };

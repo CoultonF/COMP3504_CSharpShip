@@ -12,10 +12,18 @@ using Newtonsoft.Json.Linq;
 using Android;
 using Xamarin;
 
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using InstaSharp;
+using Auth0;
+using Xamarin.Auth;
+
+
 namespace WhetherU
 {
-    [Activity(Label = "weatherAPI", MainLauncher = false, Icon = "@drawable/icon")]
-    public class MainActivity : Activity
+    [Activity(Label = "weatherAPI", MainLauncher = true, Icon = "@drawable/icon")]
+    public class WeatherScreen : Activity
     {
         protected override void OnCreate(Bundle bundle)
         {
