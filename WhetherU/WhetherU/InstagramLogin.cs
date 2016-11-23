@@ -12,7 +12,6 @@ using Android.Views;
 using Android.Widget;
 using Xamarin.Auth;
 using Instagram.Client;
-using WhetherU.Models;
 
 namespace WhetherU
 {

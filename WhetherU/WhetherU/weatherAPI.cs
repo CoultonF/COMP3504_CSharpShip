@@ -10,8 +10,9 @@ using Newtonsoft.Json;
 using System.Net.Http;
 using Newtonsoft.Json.Linq;
 using Android;
+using Xamarin;
 
-namespace weatherAPI
+namespace WhetherU
 {
     [Activity(Label = "weatherAPI", MainLauncher = false, Icon = "@drawable/icon")]
     public class MainActivity : Activity

@@ -86,7 +86,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="weatherAPI.cs" />
+    <Compile Include="weatherAPI.cs">
+      <DependentUpon>weatherAPI.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Instagram\Instagram.Client\IInstagramClient.cs" />
     <Compile Include="Instagram\Instagram.Client\InstagramClient.cs" />
     <Compile Include="Instagram\Instagram.Client\ResponseFetcher.cs" />
@@ -127,7 +129,6 @@
     <Compile Include="StartUpActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WhetherU\OAuthSettings.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -140,10 +141,12 @@
     <AndroidResource Include="Resources\layout\LoginPrompt.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <None Include="weatherAPI.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\weatherAPI.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\values\Strings.xml" />
@@ -164,8 +167,6 @@
   <ItemGroup>
     <Content Include="Instagram\Instagram.Client\Instagram.Client.csproj" />
     <Content Include="Instagram\Instagram.Models\Instagram.Models.csproj" />
-    <Content Include="WhetherU\XamaGram.Models.csproj" />
-    <AndroidResource Include="Resources\layout\weatherAPI.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
