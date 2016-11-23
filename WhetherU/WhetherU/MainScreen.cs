@@ -15,14 +15,11 @@ using Instagram.Models.Responses;
 
 namespace WhetherU
 {
-    [Activity(Label = "MainScreen")]
-    public class MainScreen : Activity {
+    [Activity(Label = "InstagramData")]
+    public class InstagramData : Activity {
         protected override async void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-
-            // Set our view from the "main" layout resource
-            SetContentView(Resource.Layout.Main);
             string token = Intent.GetStringExtra("UserToken") ?? "False";
             Console.WriteLine(token);
 
@@ -32,7 +29,7 @@ namespace WhetherU
 
             imageResponse = await InstagramClient.GetMyUserAsync();
 
-            Console.WriteLine("this");
+            //Console.WriteLine("this");
         }
 
     }

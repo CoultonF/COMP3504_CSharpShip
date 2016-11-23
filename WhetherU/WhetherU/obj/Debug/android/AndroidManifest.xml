@@ -6,7 +6,7 @@
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <application android:label="WhetherU" android:name="android.app.Application" android:allowBackup="true" android:icon="@drawable/icon" android:debuggable="true">
     <activity android:icon="@drawable/icon" android:label="weatherAPI" android:name="md5f77fb14a419adb30c5718830c7fb2a59.WeatherScreen" />
-    <activity android:label="MainScreen" android:name="md5f77fb14a419adb30c5718830c7fb2a59.MainScreen" />
+    <activity android:label="InstagramData" android:name="md5f77fb14a419adb30c5718830c7fb2a59.InstagramData" />
     <activity android:label="InstagramSignIn" android:name="md5f77fb14a419adb30c5718830c7fb2a59.InstagramLogin" />
     <activity android:icon="@drawable/icon" android:label="WhetherU" android:name="md5f77fb14a419adb30c5718830c7fb2a59.StartUpActivity">
       <intent-filter>

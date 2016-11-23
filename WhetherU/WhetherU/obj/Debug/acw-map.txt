@@ -2,10 +2,10 @@ WhetherU.WeatherScreen, WhetherU;md5f77fb14a419adb30c5718830c7fb2a59.WeatherScre
 WhetherU.WeatherScreen, WhetherU, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5f77fb14a419adb30c5718830c7fb2a59.WeatherScreen
 WhetherU.WeatherScreen;md5f77fb14a419adb30c5718830c7fb2a59.WeatherScreen
 whetheru.WeatherScreen;md5f77fb14a419adb30c5718830c7fb2a59.WeatherScreen
-WhetherU.MainScreen, WhetherU;md5f77fb14a419adb30c5718830c7fb2a59.MainScreen
-WhetherU.MainScreen, WhetherU, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5f77fb14a419adb30c5718830c7fb2a59.MainScreen
-WhetherU.MainScreen;md5f77fb14a419adb30c5718830c7fb2a59.MainScreen
-whetheru.MainScreen;md5f77fb14a419adb30c5718830c7fb2a59.MainScreen
+WhetherU.InstagramData, WhetherU;md5f77fb14a419adb30c5718830c7fb2a59.InstagramData
+WhetherU.InstagramData, WhetherU, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5f77fb14a419adb30c5718830c7fb2a59.InstagramData
+WhetherU.InstagramData;md5f77fb14a419adb30c5718830c7fb2a59.InstagramData
+whetheru.InstagramData;md5f77fb14a419adb30c5718830c7fb2a59.InstagramData
 WhetherU.InstagramLogin, WhetherU;md5f77fb14a419adb30c5718830c7fb2a59.InstagramLogin
 WhetherU.InstagramLogin, WhetherU, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5f77fb14a419adb30c5718830c7fb2a59.InstagramLogin
 WhetherU.InstagramLogin;md5f77fb14a419adb30c5718830c7fb2a59.InstagramLogin

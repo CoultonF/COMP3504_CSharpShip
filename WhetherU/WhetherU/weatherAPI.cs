@@ -12,6 +12,12 @@ using Newtonsoft.Json.Linq;
 using Android;
 using Xamarin;
 
+//instagram packages
+using Instagram.Client;
+using Instagram.Models;
+using Instagram.Models.Responses;
+using InstaSharp;
+
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,14 +28,19 @@ using Xamarin.Auth;
 
 namespace WhetherU
 {
+    
+
     [Activity(Label = "weatherAPI", MainLauncher = false, Icon = "@drawable/icon")]
     public class WeatherScreen : Activity
     {
+        string token;
+
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
 
-
+            token = Intent.GetStringExtra("UserToken") ?? "False";
+            InstagramData instaAPI = new InstagramData(token);
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.weatherAPI);
 
@@ -151,6 +162,27 @@ namespace WhetherU
 
                 return data;
             }
+        }
+
+        public class InstagramData
+        {
+            private InstagramClient InstagramClient;
+
+            public InstagramData(String token)
+            {
+                this.InstagramClient = new InstagramClient(token);
+                
+            }
+
+            public async void getImageFromInstagram(String tagname)
+            {
+
+                var imageResponse = await InstagramClient.GetMyUserAsync();
+                Console.WriteLine(imageResponse);
+
+
+            }
+            
         }
     }
 }
