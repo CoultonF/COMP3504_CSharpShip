@@ -22,7 +22,7 @@ using Xamarin.Auth;
 
 namespace WhetherU
 {
-    [Activity(Label = "weatherAPI", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "weatherAPI", MainLauncher = false, Icon = "@drawable/icon")]
     public class WeatherScreen : Activity
     {
         protected override void OnCreate(Bundle bundle)
