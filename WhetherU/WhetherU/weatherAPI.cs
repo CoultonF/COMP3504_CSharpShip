@@ -41,12 +41,20 @@ namespace WhetherU
 
 
             token = Intent.GetStringExtra("UserToken") ?? "False";
+            if (token != "False")
+            {
+                InstagramClient client = new InstagramClient(token);
+                MediasResponse media = await client.GetRecentMediaByTagName("cloudy");
+                var datas = media.Data;
+                if (datas.Count > 0)
+                {
+                    Console.WriteLine(media.Data.ElementAt<Media>(1).Images.StandardResolution.Url);
+                }
+                else
+                {
 
-            InstagramClient client = new InstagramClient(token);
-            MediasResponse x = await client.GetRecentMediaByTagName("snow");
-            var datas = x.Data;
-            Console.WriteLine(x.Data.ElementAt<Media>(1).Images.StandardResolution.Url);
-
+                }
+            }
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.weatherAPI);

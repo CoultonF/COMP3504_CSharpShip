@@ -62,7 +62,8 @@ namespace Instagram.Client
             return await responseFetcher.GetResponseAsync(requestUri).ConfigureAwait(false);
         }
 
-		public async Task<UsersResponse> GetFollowersAsync(string userId)
+
+        public async Task<UsersResponse> GetFollowersAsync(string userId)
 		{
 			string requestUri = String.Format ("users/{0}/followed-by?access_token={1}", userId, _AccessToken);
 
