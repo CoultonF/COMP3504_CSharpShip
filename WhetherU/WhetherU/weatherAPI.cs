@@ -35,12 +35,19 @@ namespace WhetherU
     {
         string token;
 
-        protected override void OnCreate(Bundle bundle)
+        protected async override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
 
+
             token = Intent.GetStringExtra("UserToken") ?? "False";
-            InstagramData instaAPI = new InstagramData(token);
+
+            InstagramClient client = new InstagramClient(token);
+            MediasResponse x = await client.GetRecentMediaByTagName("snow");
+            var datas = x.Data;
+            Console.WriteLine(x.Data.ElementAt<Media>(1).Images.StandardResolution.Url);
+
+
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.weatherAPI);
 
@@ -166,21 +173,11 @@ namespace WhetherU
 
         public class InstagramData
         {
-            private InstagramClient InstagramClient;
 
-            public InstagramData(String token)
+            public async void  runQuery(String queryString)
             {
-                this.InstagramClient = new InstagramClient(token);
-                
-            }
-
-            public async void getImageFromInstagram(String tagname)
-            {
-
-                var imageResponse = await InstagramClient.GetMyUserAsync();
-                Console.WriteLine(imageResponse);
-
-
+                var results = await DataService.GetDataFromService(queryString).ConfigureAwait(false);
+                Console.WriteLine(results);
             }
             
         }

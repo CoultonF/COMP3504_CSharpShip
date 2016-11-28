@@ -91,7 +91,7 @@ namespace WhetherU
 
                 var auth = new OAuth2Authenticator(
                     clientId: clientId,
-                    scope: "basic",
+                    scope: "public_content",
                     authorizeUrl: new Uri("https://api.instagram.com/oauth/authorize/"),
                     redirectUrl: new Uri(redirectUri));
                 var token = "";

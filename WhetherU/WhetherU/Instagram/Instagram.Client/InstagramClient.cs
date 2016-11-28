@@ -54,6 +54,14 @@ namespace Instagram.Client
 			return await responseFetcher.GetResponseAsync(requestUri).ConfigureAwait(false);
 		}
 
+        public async Task<MediasResponse> GetRecentMediaByTagName(String tagname)
+        {
+            string requestUri = String.Format("tags/{0}/media/recent?access_token={1}", tagname,  _AccessToken);
+
+            var responseFetcher = new ResponseFetcher<MediasResponse>(API_SERVICE_URL);
+            return await responseFetcher.GetResponseAsync(requestUri).ConfigureAwait(false);
+        }
+
 		public async Task<UsersResponse> GetFollowersAsync(string userId)
 		{
 			string requestUri = String.Format ("users/{0}/followed-by?access_token={1}", userId, _AccessToken);
