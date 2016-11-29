@@ -25,6 +25,10 @@ using InstaSharp;
 using Auth0;
 using Xamarin.Auth;
 
+using System.Net;
+using System.IO;
+using System.Text;
+
 
 namespace WhetherU
 {
@@ -39,20 +43,37 @@ namespace WhetherU
         {
             base.OnCreate(bundle);
 
+            RequestWindowFeature(WindowFeatures.NoTitle);
 
             token = Intent.GetStringExtra("UserToken") ?? "False";
             if (token != "False")
             {
                 InstagramClient client = new InstagramClient(token);
-                MediasResponse media = await client.GetRecentMediaByTagName("cloudy");
+                MediasResponse media = await client.GetRecentMediaByTagName("snow");
                 var datas = media.Data;
                 if (datas.Count > 0)
                 {
                     Console.WriteLine(media.Data.ElementAt<Media>(1).Images.StandardResolution.Url);
+                    
+                    var webClient = new WebClient();
+
+                    webClient.DownloadDataCompleted += (s, e) => {
+                    var bytes = e.Result; // get the downloaded data
+                    string documentsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+                    string localFilename = "background.jpg";
+                    string localPath = Path.Combine(documentsPath, localFilename);
+                    File.WriteAllBytes(localPath, bytes); // writes to local storage
+
+
+                    };
+
+                    var url = new Uri(media.Data.ElementAt<Media>(1).Images.StandardResolution.Url);
+                    webClient.DownloadDataAsync(url);
+                    
                 }
                 else
                 {
-
+                    //TODO:pull image from database for criteria
                 }
             }
 

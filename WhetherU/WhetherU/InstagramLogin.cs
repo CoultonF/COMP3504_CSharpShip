@@ -79,7 +79,7 @@ namespace WhetherU
 
         protected override async void OnCreate(Bundle savedInstanceState)
         {
-
+                RequestWindowFeature(WindowFeatures.NoTitle);
                 base.OnCreate(savedInstanceState);
                 SetContentView(Resource.Layout.Main);
                 // Set our view from the "main" layout resource
