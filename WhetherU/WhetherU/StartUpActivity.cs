@@ -34,7 +34,7 @@ namespace WhetherU
             //button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
             withInsta.Click += delegate {
                 Console.Write("Button Clicked");
-                String token = "4156801757.33665d0.fb93e6ef964f4c5dbc665147ebab12a7";
+                String token = "";
                 if (token == "")
                 {
                     StartActivity(typeof(InstagramLogin));
