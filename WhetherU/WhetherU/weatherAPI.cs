@@ -63,7 +63,8 @@ namespace WhetherU
                     string localFilename = "background.jpg";
                     string localPath = Path.Combine(documentsPath, localFilename);
                     File.WriteAllBytes(localPath, bytes); // writes to local storage
-
+                    
+                    view()ResId.
 
                     };
 
