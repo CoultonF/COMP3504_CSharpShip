@@ -25,10 +25,6 @@ using InstaSharp;
 using Auth0;
 using Xamarin.Auth;
 
-using System.Net;
-using System.IO;
-using System.Text;
-
 
 namespace WhetherU
 {
@@ -43,17 +39,17 @@ namespace WhetherU
         {
             base.OnCreate(bundle);
 
-            RequestWindowFeature(WindowFeatures.NoTitle);
 
             token = Intent.GetStringExtra("UserToken") ?? "False";
             if (token != "False")
             {
                 InstagramClient client = new InstagramClient(token);
-                MediasResponse media = await client.GetRecentMediaByTagName("snow");
+                MediasResponse media = await client.GetRecentMediaByTagName("cloudy");
                 var datas = media.Data;
                 if (datas.Count > 0)
                 {
                     Console.WriteLine(media.Data.ElementAt<Media>(1).Images.StandardResolution.Url);
+<<<<<<< HEAD
                     
                     var webClient = new WebClient();
 
@@ -71,10 +67,12 @@ namespace WhetherU
                     var url = new Uri(media.Data.ElementAt<Media>(1).Images.StandardResolution.Url);
                     webClient.DownloadDataAsync(url);
                     
+=======
+>>>>>>> parent of 56d28d0... removed the app top bar
                 }
                 else
                 {
-                    //TODO:pull image from database for criteria
+
                 }
             }
 

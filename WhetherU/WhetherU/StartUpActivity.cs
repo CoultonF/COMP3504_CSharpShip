@@ -22,7 +22,7 @@ namespace WhetherU
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-            RequestWindowFeature(WindowFeatures.NoTitle);
+
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.LoginPrompt);
 
@@ -34,6 +34,7 @@ namespace WhetherU
             //button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
             withInsta.Click += delegate {
                 Console.Write("Button Clicked");
+<<<<<<< HEAD
                 String token = "";
                 if (token == "")
                 {
@@ -48,6 +49,9 @@ namespace WhetherU
                     StartActivity(intent);
                 }
               
+=======
+              StartActivity(typeof(InstagramLogin));
+>>>>>>> parent of 56d28d0... removed the app top bar
             };
             withoutInsta.Click += delegate {
                 Console.Write("Button Clicked");
