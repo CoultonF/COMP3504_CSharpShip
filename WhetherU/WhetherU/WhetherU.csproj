@@ -167,6 +167,10 @@
   <ItemGroup>
     <Content Include="Instagram\Instagram.Client\Instagram.Client.csproj" />
     <Content Include="Instagram\Instagram.Models\Instagram.Models.csproj" />
+    <AndroidResource Include="Resources\drawable\main.png" />
+    <AndroidResource Include="Resources\drawable\withIG.png" />
+    <AndroidResource Include="Resources\drawable\withoutIG.png" />
+    <AndroidResource Include="Resources\drawable\title.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />

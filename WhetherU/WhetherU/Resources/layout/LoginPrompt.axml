@@ -3,16 +3,28 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:minWidth="25px"
-    android:minHeight="25px">
-    <Button
-        android:text="Sign In with Instagram"
-        android:layout_width="match_parent"
+    android:gravity="center"
+    android:background="@drawable/main">
+    <ImageView
+        android:id="@+id/Title"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/UseInstagram" />
-    <Button
-        android:text="Continue without Instagram"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/NoInstagram" />
+        android:src="@drawable/title"
+        android:background="@android:color/transparent"
+        android:layout_marginBottom="44.0dp" />
+    <ImageButton
+        android:id="@+id/UseInstagram"
+        android:layout_width="280.0dp"
+        android:layout_height="80.0dp"
+        android:alpha="0.7"
+        android:src="@drawable/withIG"
+        android:background="@android:color/transparent" />
+    <ImageButton
+        android:id="@+id/NoInstagram"
+        android:layout_width="280.0dp"
+        android:layout_height="80.0dp"
+        android:alpha="0.8"
+        android:src="@drawable/withoutIG"
+        android:padding="70dp"
+        android:background="@android:color/transparent" />
 </LinearLayout>

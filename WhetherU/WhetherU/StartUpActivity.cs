@@ -28,8 +28,8 @@ namespace WhetherU
 
             // Get our button from the layout resource,
             // and attach an event to it
-            Button withInsta = FindViewById<Button>(Resource.Id.UseInstagram);
-            Button withoutInsta = FindViewById<Button>(Resource.Id.NoInstagram);
+            ImageButton withInsta = FindViewById<ImageButton>(Resource.Id.UseInstagram);
+            ImageButton withoutInsta = FindViewById<ImageButton>(Resource.Id.NoInstagram);
 
             //button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
             withInsta.Click += delegate {

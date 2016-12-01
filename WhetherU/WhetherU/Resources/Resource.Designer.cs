@@ -48,6 +48,18 @@ namespace WhetherU
 			// aapt resource value: 0x7f020000
 			public const int Icon = 2130837504;
 			
+			// aapt resource value: 0x7f020001
+			public const int main = 2130837505;
+			
+			// aapt resource value: 0x7f020002
+			public const int title = 2130837506;
+			
+			// aapt resource value: 0x7f020003
+			public const int withIG = 2130837507;
+			
+			// aapt resource value: 0x7f020004
+			public const int withoutIG = 2130837508;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -61,71 +73,74 @@ namespace WhetherU
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050002
-			public const int MyButton = 2131034114;
+			// aapt resource value: 0x7f050003
+			public const int MyButton = 2131034115;
 			
-			// aapt resource value: 0x7f050001
-			public const int NoInstagram = 2131034113;
+			// aapt resource value: 0x7f050002
+			public const int NoInstagram = 2131034114;
 			
 			// aapt resource value: 0x7f050000
-			public const int UseInstagram = 2131034112;
+			public const int Title = 2131034112;
 			
-			// aapt resource value: 0x7f050005
-			public const int ZipCodeLabel = 2131034117;
-			
-			// aapt resource value: 0x7f050004
-			public const int ZipCodeSearchLabel = 2131034116;
-			
-			// aapt resource value: 0x7f05000f
-			public const int humidityText = 2131034127;
-			
-			// aapt resource value: 0x7f05000e
-			public const int humidtyLabel = 2131034126;
-			
-			// aapt resource value: 0x7f050008
-			public const int locationLabel = 2131034120;
-			
-			// aapt resource value: 0x7f050009
-			public const int locationText = 2131034121;
-			
-			// aapt resource value: 0x7f050003
-			public const int relativeLayout1 = 2131034115;
-			
-			// aapt resource value: 0x7f050012
-			public const int sunriseLabel = 2131034130;
-			
-			// aapt resource value: 0x7f050013
-			public const int sunriseText = 2131034131;
-			
-			// aapt resource value: 0x7f050014
-			public const int sunsetLabel = 2131034132;
-			
-			// aapt resource value: 0x7f050015
-			public const int sunsetText = 2131034133;
-			
-			// aapt resource value: 0x7f05000a
-			public const int tempLabel = 2131034122;
-			
-			// aapt resource value: 0x7f05000b
-			public const int tempText = 2131034123;
-			
-			// aapt resource value: 0x7f050010
-			public const int visibilityLabel = 2131034128;
-			
-			// aapt resource value: 0x7f050011
-			public const int visibilityText = 2131034129;
-			
-			// aapt resource value: 0x7f050007
-			public const int weatherBtn = 2131034119;
-			
-			// aapt resource value: 0x7f05000c
-			public const int windLabel = 2131034124;
-			
-			// aapt resource value: 0x7f05000d
-			public const int windText = 2131034125;
+			// aapt resource value: 0x7f050001
+			public const int UseInstagram = 2131034113;
 			
 			// aapt resource value: 0x7f050006
-			public const int zipCodeEntry = 2131034118;
+			public const int ZipCodeLabel = 2131034118;
+			
+			// aapt resource value: 0x7f050005
+			public const int ZipCodeSearchLabel = 2131034117;
+			
+			// aapt resource value: 0x7f050010
+			public const int humidityText = 2131034128;
+			
+			// aapt resource value: 0x7f05000f
+			public const int humidtyLabel = 2131034127;
+			
+			// aapt resource value: 0x7f050009
+			public const int locationLabel = 2131034121;
+			
+			// aapt resource value: 0x7f05000a
+			public const int locationText = 2131034122;
+			
+			// aapt resource value: 0x7f050004
+			public const int relativeLayout1 = 2131034116;
+			
+			// aapt resource value: 0x7f050013
+			public const int sunriseLabel = 2131034131;
+			
+			// aapt resource value: 0x7f050014
+			public const int sunriseText = 2131034132;
+			
+			// aapt resource value: 0x7f050015
+			public const int sunsetLabel = 2131034133;
+			
+			// aapt resource value: 0x7f050016
+			public const int sunsetText = 2131034134;
+			
+			// aapt resource value: 0x7f05000b
+			public const int tempLabel = 2131034123;
+			
+			// aapt resource value: 0x7f05000c
+			public const int tempText = 2131034124;
+			
+			// aapt resource value: 0x7f050011
+			public const int visibilityLabel = 2131034129;
+			
+			// aapt resource value: 0x7f050012
+			public const int visibilityText = 2131034130;
+			
+			// aapt resource value: 0x7f050008
+			public const int weatherBtn = 2131034120;
+			
+			// aapt resource value: 0x7f05000d
+			public const int windLabel = 2131034125;
+			
+			// aapt resource value: 0x7f05000e
+			public const int windText = 2131034126;
+			
+			// aapt resource value: 0x7f050007
+			public const int zipCodeEntry = 2131034119;
 			
 			static Id()
 			{
