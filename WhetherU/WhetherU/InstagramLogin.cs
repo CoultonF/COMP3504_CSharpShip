@@ -77,7 +77,7 @@ namespace WhetherU
 
         }
 
-        protected override async void OnCreate(Bundle savedInstanceState)
+        protected override  void OnCreate(Bundle savedInstanceState)
         {
                 RequestWindowFeature(WindowFeatures.NoTitle);
                 base.OnCreate(savedInstanceState);
@@ -85,9 +85,9 @@ namespace WhetherU
                 // Set our view from the "main" layout resource
                 
                 var clientId = "33665d08e62942c6b1f484f422bbb7c1";
-                var clientSecret = "ae94378b39e747b0ac5d6f8640636b02 ";
+                //var clientSecret = "ae94378b39e747b0ac5d6f8640636b02 ";
                 var redirectUri = "https://elfsight.com/service/generate-instagram-access-token/";
-                var realtimeUri = "";
+                //var realtimeUri = "";
 
                 var auth = new OAuth2Authenticator(
                     clientId: clientId,

@@ -141,6 +141,9 @@
     <AndroidResource Include="Resources\layout\LoginPrompt.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\layout1.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">
@@ -165,7 +168,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Instagram\Instagram.Client\Instagram.Client.csproj" />
+    <Content Include="Instagram\Instagram.Client\Instagram.Client.csproj">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Instagram\Instagram.Models\Instagram.Models.csproj" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

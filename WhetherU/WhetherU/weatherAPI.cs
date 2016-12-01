@@ -28,7 +28,8 @@ using Xamarin.Auth;
 using System.Net;
 using System.IO;
 using System.Text;
-
+using Android.Graphics;
+using System.Drawing;
 
 namespace WhetherU
 {
@@ -54,22 +55,27 @@ namespace WhetherU
                 if (datas.Count > 0)
                 {
                     Console.WriteLine(media.Data.ElementAt<Media>(1).Images.StandardResolution.Url);
+                    //var uri = Android.Net.Uri.();
+
+                    SetContentView(Resource.Layout.layout1);
+                    var aUri = Android.Net.Uri.Parse("content:https://scontent.cdninstagram.com/t51.2885-15/sh0.08/e35/p640x640/15048095_583424985197456_4686969175854284800_n.jpg");
+                    Uri uri = new Uri(media.Data.ElementAt<Media>(1).Images.StandardResolution.Url);
+                    //System.Net.WebRequest request = System.Net.WebRequest.Create(media.Data.ElementAt<Media>(1).Images.StandardResolution.Url);
+                    //System.Net.WebResponse response = request.GetResponse();
+                    //System.IO.Stream responseStream = response.GetResponseStream();
+                    //Bitmap bitmap2 = new Bitmap(responseStream);
+
+                    String localfilename = "";
+                    WebClient webClient = new WebClient();
+                    webClient.DownloadFile("https://scontent.cdninstagram.com/t51.2885-15/sh0.08/e35/p640x640/15048095_583424985197456_4686969175854284800_n.jpg", localfilename);
+
+                    Android.Graphics.Bitmap mBitmap = null;
+                    mBitmap = Android.Provider.MediaStore.Images.Media.GetBitmap(this.ContentResolver, aUri);
                     
-                    var webClient = new WebClient();
 
-                    webClient.DownloadDataCompleted += (s, e) => {
-                    var bytes = e.Result; // get the downloaded data
-                    string documentsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-                    string localFilename = "background.jpg";
-                    string localPath = Path.Combine(documentsPath, localFilename);
-                    File.WriteAllBytes(localPath, bytes); // writes to local storage
+                    //Bitmap bmp = BitmapFactory.DecodeStream(ContentResolver.OpenInputStream(aUri));
+                    FindViewById<ImageView>(Resource.Id.imgAbsolute).SetImageBitmap(mBitmap);
 
-
-                    };
-
-                    var url = new Uri(media.Data.ElementAt<Media>(1).Images.StandardResolution.Url);
-                    webClient.DownloadDataAsync(url);
-                    
                 }
                 else
                 {

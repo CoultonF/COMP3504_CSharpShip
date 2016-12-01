@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/imgAbsolute"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_x="0dp"
+        android:layout_y="0dp"
+        android:minWidth="50dp" />
+    <TextView
+        android:id="@+id/txtAbsolute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="0dp"
+        android:text="AbsoluteLayout example"
+        android:textColor="#FFF"
+        android:textSize="20sp" />
+    <Button
+        android:id="@+id/btnAbsolute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="38dp"
+        android:layout_y="280dp"
+        android:text="Button" />
+    <Button
+        android:id="@+id/btnAbsolute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="50dp"
+        android:layout_y="440dp"
+        android:text="Button 3" />
+</AbsoluteLayout>
