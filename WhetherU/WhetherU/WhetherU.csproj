@@ -141,9 +141,6 @@
     <AndroidResource Include="Resources\layout\LoginPrompt.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\layout1.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">
@@ -172,6 +169,10 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Instagram\Instagram.Models\Instagram.Models.csproj" />
+    <AndroidResource Include="Resources\drawable\main.png" />
+    <AndroidResource Include="Resources\drawable\withIG.png" />
+    <AndroidResource Include="Resources\drawable\withoutIG.png" />
+    <AndroidResource Include="Resources\drawable\title.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />

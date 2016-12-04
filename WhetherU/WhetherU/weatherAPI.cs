@@ -1,7 +1,6 @@
 using System;
 using Android.App;
 using Android.Content;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
@@ -9,27 +8,19 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.Net.Http;
 using Newtonsoft.Json.Linq;
-using Android;
-using Xamarin;
 
 //instagram packages
 using Instagram.Client;
 using Instagram.Models;
 using Instagram.Models.Responses;
-using InstaSharp;
 
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using InstaSharp;
-using Auth0;
-using Xamarin.Auth;
+
 
 using System.Net;
-using System.IO;
-using System.Text;
+//using System.Text;
 using Android.Graphics;
-using System.Drawing;
+using static Android.Widget.ImageView;
 
 namespace WhetherU
 {
@@ -50,68 +41,71 @@ namespace WhetherU
             if (token != "False")
             {
                 InstagramClient client = new InstagramClient(token);
-                MediasResponse media = await client.GetRecentMediaByTagName("snow");
+                MediasResponse media = await client.GetRecentMediaByTagName("cold");
                 var datas = media.Data;
                 if (datas.Count > 0)
                 {
-                    Console.WriteLine(media.Data.ElementAt<Media>(1).Images.StandardResolution.Url);
-                    //var uri = Android.Net.Uri.();
+                    Bitmap imageBitmap = null;
+                    String url = media.Data.ElementAt<Media>(0).Images.StandardResolution.Url.ToString();
+                    using (var webClient = new WebClient())
+                    {
+                        var imageBytes = webClient.DownloadData(url);
+                        if (imageBytes != null && imageBytes.Length > 0)
+                        {
+                            imageBitmap = BitmapFactory.DecodeByteArray(imageBytes, 0, imageBytes.Length);
+                        }
+                    }
 
-                    SetContentView(Resource.Layout.layout1);
-                    var aUri = Android.Net.Uri.Parse("content:https://scontent.cdninstagram.com/t51.2885-15/sh0.08/e35/p640x640/15048095_583424985197456_4686969175854284800_n.jpg");
-                    Uri uri = new Uri(media.Data.ElementAt<Media>(1).Images.StandardResolution.Url);
-                    //System.Net.WebRequest request = System.Net.WebRequest.Create(media.Data.ElementAt<Media>(1).Images.StandardResolution.Url);
-                    //System.Net.WebResponse response = request.GetResponse();
-                    //System.IO.Stream responseStream = response.GetResponseStream();
-                    //Bitmap bitmap2 = new Bitmap(responseStream);
+                    SetContentView(Resource.Layout.weatherAPI);
+                    ImageView image = FindViewById<ImageView>(Resource.Id.imgAbsolute);
+                    image.SetImageBitmap(imageBitmap);
+                    image.SetScaleType(ScaleType.CenterCrop);
+                    runWeather("51.0114","114.1288");
 
-                    String localfilename = "";
-                    WebClient webClient = new WebClient();
-                    webClient.DownloadFile("https://scontent.cdninstagram.com/t51.2885-15/sh0.08/e35/p640x640/15048095_583424985197456_4686969175854284800_n.jpg", localfilename);
-
-                    Android.Graphics.Bitmap mBitmap = null;
-                    mBitmap = Android.Provider.MediaStore.Images.Media.GetBitmap(this.ContentResolver, aUri);
                     
-
-                    //Bitmap bmp = BitmapFactory.DecodeStream(ContentResolver.OpenInputStream(aUri));
-                    FindViewById<ImageView>(Resource.Id.imgAbsolute).SetImageBitmap(mBitmap);
-
                 }
                 else
                 {
                     //TODO:pull image from database for criteria
+
+                    SetContentView(Resource.Layout.weatherAPI);
+                    ImageView image = FindViewById<ImageView>(Resource.Id.imgAbsolute);
+                    //image.SetImageResource(Resource.Drawable.main);
+                    runWeather("51.0114", "114.1288");
+
+                    
                 }
             }
 
             // Set our view from the "main" layout resource
-            SetContentView(Resource.Layout.weatherAPI);
+            //SetContentView(Resource.Layout.weatherAPI);
 
 
             // Get our button from the layout resource,
             // and attach an event to it
-            Button button = FindViewById<Button>(Resource.Id.weatherBtn);
+            //Button button = FindViewById<Button>(Resource.Id.weatherBtn);
 
 
-            button.Click += Button_Click;
+            //button.Click += Button_Click;
         }
 
 
-        private async void Button_Click(object sender, EventArgs e)
+        private async void runWeather(String lat, String lon)
         {
-            EditText zipCodeEntry = FindViewById<EditText>(Resource.Id.zipCodeEntry);
+            //EditText zipCodeEntry = FindViewById<EditText>(Resource.Id.zipCodeEntry);
+            Weather weather = await Core.GetWeather("51.0144", "114.1288");
+            FindViewById<TextView>(Resource.Id.locationText).Text = weather.Title;
+            FindViewById<TextView>(Resource.Id.tempText).Text = weather.Temperature;
+            FindViewById<TextView>(Resource.Id.windText).Text = weather.Wind;
+            FindViewById<TextView>(Resource.Id.visibilityText).Text = weather.Visibility;
+            FindViewById<TextView>(Resource.Id.humidityText).Text = weather.Humidity;
+            FindViewById<TextView>(Resource.Id.sunriseText).Text = weather.Sunrise;
+            FindViewById<TextView>(Resource.Id.sunsetText).Text = weather.Sunset;
 
+            //if (!String.IsNullOrEmpty(zipCodeEntry.Text))
+            //{
 
-            if (!String.IsNullOrEmpty(zipCodeEntry.Text))
-            {
-                Weather weather = await Core.GetWeather(zipCodeEntry.Text);
-                FindViewById<TextView>(Resource.Id.locationText).Text = weather.Title;
-                FindViewById<TextView>(Resource.Id.tempText).Text = weather.Temperature;
-                FindViewById<TextView>(Resource.Id.windText).Text = weather.Wind;
-                FindViewById<TextView>(Resource.Id.visibilityText).Text = weather.Visibility;
-                FindViewById<TextView>(Resource.Id.humidityText).Text = weather.Humidity;
-                FindViewById<TextView>(Resource.Id.sunriseText).Text = weather.Sunrise;
-                FindViewById<TextView>(Resource.Id.sunsetText).Text = weather.Sunset;
-            }
+            //}
         }
 
 
@@ -143,12 +137,11 @@ namespace WhetherU
 
         public class Core
         {
-            public static async Task<Weather> GetWeather(string zipCode)
+            public static async Task<Weather> GetWeather(string lat, string lon)
             {
                 //Sign up for a free API key at http://openweathermap.org/appid
                 string key = "5a4417e333b538728fea644bd7eb16cf";
-                string queryString = "http://api.openweathermap.org/data/2.5/weather?zip="
-                    + zipCode + ",us&appid=" + key + "&units=imperial";
+                string queryString = "http://api.openweathermap.org/data/2.5/weather?lat=51.0144&lon=-114.1288&appid=5a4417e333b538728fea644bd7eb16cf&units=metric";
 
 
                 //Make sure developers running this sample replaced the API key
