@@ -10,23 +10,17 @@
         android:layout_y="0dp"
         android:minWidth="50dp" />
     <TextView
-        android:text="Location"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/locationLabel"
-        android:layout_x="50dp"
-        android:layout_y="50dp" />
-    <TextView
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/locationText"
-        android:layout_x="50dp"
-        android:layout_y="100dp" />
+        android:layout_x="290dp"
+        android:textSize="50sp"
+        android:text="21C"
+        android:layout_y="400dp" />
     <TextView
         android:text="Temperature"
-        android:textAppearance="?android:attr/textAppearanceSmall"
+        
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_x="50dp"
