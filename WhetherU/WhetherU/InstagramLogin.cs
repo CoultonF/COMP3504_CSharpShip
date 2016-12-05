@@ -13,6 +13,9 @@ using Android.Widget;
 using Xamarin.Auth;
 using Instagram.Client;
 
+using DataBase;
+using SQLite;
+
 namespace WhetherU
 {
     [Activity(Label = "InstagramSignIn")]
@@ -81,7 +84,6 @@ namespace WhetherU
         {
                 RequestWindowFeature(WindowFeatures.NoTitle);
                 base.OnCreate(savedInstanceState);
-                SetContentView(Resource.Layout.Main);
                 // Set our view from the "main" layout resource
                 
                 var clientId = "33665d08e62942c6b1f484f422bbb7c1";
@@ -95,9 +97,11 @@ namespace WhetherU
                     authorizeUrl: new Uri("https://api.instagram.com/oauth/authorize/"),
                     redirectUrl: new Uri(redirectUri));
                 var token = "";
-                auth.Completed += (s, ee) => {
+                LocalDataAccessLayer dataAc = LocalDataAccessLayer.getInstance();
+                User user = dataAc.getUser();
+            auth.Completed += (s, ee) => {
                     token = ee.Account.Properties["access_token"];
-
+                user.login = token;           
                 };
                 StartActivity(auth.GetUI(this));
 

@@ -37,6 +37,7 @@ namespace WhetherU
 
             RequestWindowFeature(WindowFeatures.NoTitle);
 
+            //Make token be pulled from DB
             token = Intent.GetStringExtra("UserToken") ?? "False";
             if (token != "False")
             {
