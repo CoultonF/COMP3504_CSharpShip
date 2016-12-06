@@ -62,7 +62,8 @@ namespace WhetherU
                     image.SetImageBitmap(imageBitmap);
                     image.SetScaleType(ScaleType.CenterCrop);
                     runWeather("51.0114","114.1288");
-
+                    
+                
                     
                 }
                 else
