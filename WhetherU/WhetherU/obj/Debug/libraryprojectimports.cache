@@ -3,10 +3,14 @@
   <Jars></Jars>
   <ResolvedResourceDirectories>
     <ResolvedResourceDirectory>C:\Users\vagrant\Documents\Visual Studio 2015\Projects\COMP3504_CSharpShip\WhetherU\WhetherU\obj\Debug\__library_projects__\Auth0Client.Android\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Users\vagrant\Documents\Visual Studio 2015\Projects\COMP3504_CSharpShip\WhetherU\WhetherU\obj\Debug\__library_projects__\SQLitePCL.raw\library_project_imports\res</ResolvedResourceDirectory>
   </ResolvedResourceDirectories>
-  <ResolvedAssetDirectories />
+  <ResolvedAssetDirectories>
+    <ResolvedAssetDirectory>C:\Users\vagrant\Documents\Visual Studio 2015\Projects\COMP3504_CSharpShip\WhetherU\WhetherU\obj\Debug\__library_projects__\SQLitePCL.raw\library_project_imports\assets</ResolvedAssetDirectory>
+  </ResolvedAssetDirectories>
   <ResolvedEnvironmentFiles />
   <ResolvedResourceDirectoryStamps>
     <ResolvedResourceDirectoryStamp>C:\Users\vagrant\Documents\Visual Studio 2015\Projects\COMP3504_CSharpShip\WhetherU\WhetherU\obj\Debug\__library_projects__\Auth0Client.Android.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Users\vagrant\Documents\Visual Studio 2015\Projects\COMP3504_CSharpShip\WhetherU\WhetherU\obj\Debug\__library_projects__\SQLitePCL.raw.stamp</ResolvedResourceDirectoryStamp>
   </ResolvedResourceDirectoryStamps>
 </Paths>
