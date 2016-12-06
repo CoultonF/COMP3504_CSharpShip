@@ -188,6 +188,10 @@
     <AndroidResource Include="Resources\drawable\withIG.png" />
     <AndroidResource Include="Resources\drawable\withoutIG.png" />
     <AndroidResource Include="Resources\drawable\title.png" />
+    <AndroidResource Include="Resources\drawable\black.png" />
+    <AndroidResource Include="Resources\drawable\sunset.png" />
+    <AndroidResource Include="Resources\drawable\suncloud.png" />
+    <AndroidResource Include="Resources\drawable\sunrise.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
