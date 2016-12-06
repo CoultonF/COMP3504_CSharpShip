@@ -16,7 +16,8 @@ using Instagram.Models.Responses;
 namespace WhetherU
 {
     [Activity(Label = "InstagramData")]
-    public class InstagramData : Activity {
+    public class InstagramData : Activity
+    {
         protected override async void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
