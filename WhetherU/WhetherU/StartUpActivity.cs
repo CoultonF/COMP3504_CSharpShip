@@ -37,7 +37,7 @@ namespace WhetherU
             }
             catch (Exception e)
             {
-                dataAc.addUser("Tory", "");
+                dataAc.addUser("User", "");
                 user = dataAc.getUser();
             }
             token = user.login;

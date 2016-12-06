@@ -257,6 +257,10 @@ namespace DataBase
             User info = new User(name, loginStr);
             dbConnection.Insert(info);
         }
+        public void deleteUser()
+        {
+            dbConnection.Delete<User>(1);
+        }
         public void updateLogin(string loginStr)
         {
             User user = getUser();
