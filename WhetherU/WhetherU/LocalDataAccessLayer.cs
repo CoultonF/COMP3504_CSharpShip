@@ -21,7 +21,7 @@ namespace DataBase
         {
             if (data == null)
                 data = new LocalDataAccessLayer();
-            
+
             return data;
         }
 
@@ -104,13 +104,14 @@ namespace DataBase
             popWndTbl();
             popCondTbl();
             popTempTbl();
+            popUITbl();
         }
 
         private void popWndTbl()
         {
-            int windCode = 1;
+            int windCode = -3;
             int index = 0;
-            for (int i = 0; i < 101; i++)
+            for (int i = 60; i >= 0; i--)
             {
                 if (index == 5)
                 {
@@ -121,7 +122,7 @@ namespace DataBase
                 index++;
             }
         }
-        
+
         private void popCondTbl()
         {
             addCondition(new Condition(2, "Thunderstorm", -5));
@@ -139,9 +140,9 @@ namespace DataBase
         {
             int tempCode = 1;
             int index = 0;
-            for (int i = -40; i< 40; i++)
+            for (int i = -40; i < 50; i++)
             {
-                if(index==5)
+                if (index == 5)
                 {
                     tempCode++;
                     index = 0;
@@ -149,6 +150,20 @@ namespace DataBase
                 addTemperature(new Temperature(i, tempCode));
                 index++;
             }
+        }
+        //This method is for dispalying functionality at the event only. Will be deleted post event.
+        private void popUITbl()
+        {
+            addLogEntry(234, 4, 5, false);
+            addLogEntry(306, 10, 10, false);
+            addLogEntry(634, -23, 2, false);
+            addLogEntry(638, -12, 6, false);
+            addLogEntry(800, 2, 20, false);
+            addLogEntry(800, 20, 5, true);
+            addLogEntry(800, 49, 2, true);
+            addLogEntry(546, 45, 2, true);
+            addLogEntry(800, 23, 5, true);
+            addLogEntry(800, 35, 8, true);
         }
 
         //greeting methods
@@ -162,11 +177,11 @@ namespace DataBase
         {
             DateTime currTime = DateTime.Now;
             string greeting = "";
-            if(currTime.Hour>0 && currTime.Hour<12)
+            if (currTime.Hour > 0 && currTime.Hour < 12)
             {
                 greeting = "Good Morning ";
             }
-            else if (currTime.Hour>=12 && currTime.Hour<5)
+            else if (currTime.Hour >= 12 && currTime.Hour < 5)
             {
                 greeting = "Good Afternoon ";
             }
@@ -187,11 +202,11 @@ namespace DataBase
             User user = getUser();
             user.updateRng();
             string feeling = "";
-            if(currWeather>=user.cldRngStart && currWeather<=user.cldRngEnd)
+            if (currWeather >= user.cldRngStart && currWeather <= user.cldRngEnd)
             {
                 feeling = "You may feel cold today.";
             }
-            else if(currWeather >= user.hotRngStart && currWeather <= user.hotRngEnd)
+            else if (currWeather >= user.hotRngStart && currWeather <= user.hotRngEnd)
             {
                 feeling = "You may feel hot today.";
             }
@@ -265,7 +280,7 @@ namespace DataBase
         {
             User user = getUser();
             user.login = loginStr;
-           // string name = user.name;
+            // string name = user.name;
             updateUserInfo(user);
         }
         private void addCondition(Condition info)
@@ -274,7 +289,7 @@ namespace DataBase
         }
         private Condition getConditionByID(int id)
         {
-            List<Condition> list = new List <Condition>(dbConnection.Table<Condition>());
+            List<Condition> list = new List<Condition>(dbConnection.Table<Condition>());
             List<Condition> list2 = new List<Condition>(list.Where<Condition>(p => p.yahooCondId == id));
 
             Condition row = list2[0];
@@ -300,7 +315,7 @@ namespace DataBase
         {
             dbConnection.Insert(info);
         }
-        private Wind getWindByID(int id)
+        public Wind getWindByID(int id)
         {
             List<Wind> list = new List<Wind>(dbConnection.Table<Wind>());
             List<Wind> list2 = new List<Wind>(list.Where<Wind>(p => p.windSp == id));
@@ -321,6 +336,8 @@ namespace DataBase
             //gets all elements in the Condition table and packages it into a List
             return new List<Condition>(dbConnection.Table<Condition>());
         }
+
+
 
         /* public List<Student> getAllStudentsOrdered()
          {

@@ -35,10 +35,7 @@ namespace DataBase
             //this.cldRngEnd = cldRngEnd;
             //this.hotRngStart = hotRngStart;
             //this.hotRngEnd = hotRngEnd;
-            cldRngStart = createCStart();
-            cldRngEnd = createCEnd();
-            hotRngStart = createHStart();
-            hotRngEnd = createHEnd();
+            updateRng();
         }
 
         public override string ToString() // called when object given to list for default list display

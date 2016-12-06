@@ -24,7 +24,7 @@ using static Android.Widget.ImageView;
 
 namespace WhetherU
 {
-    
+
 
     [Activity(Label = "weatherAPI", MainLauncher = false, Icon = "@drawable/icon")]
     public class WeatherScreen : Activity
@@ -61,10 +61,10 @@ namespace WhetherU
                     ImageView image = FindViewById<ImageView>(Resource.Id.imgAbsolute);
                     image.SetImageBitmap(imageBitmap);
                     image.SetScaleType(ScaleType.CenterCrop);
-                    runWeather("51.0114","114.1288");
-                    
-                
-                    
+                    runWeather("51.0114", "114.1288");
+
+
+
                 }
                 else
                 {
@@ -75,7 +75,7 @@ namespace WhetherU
                     //image.SetImageResource(Resource.Drawable.main);
                     runWeather("51.0114", "114.1288");
 
-                    
+
                 }
             }
 
@@ -163,13 +163,10 @@ namespace WhetherU
 
 
                     DateTime time = new System.DateTime(1970, 1, 1, 0, 0, 0, 0);
-                    
                     DateTime sunrise = time.AddSeconds((double)results["sys"]["sunrise"]);
                     DateTime sunset = time.AddSeconds((double)results["sys"]["sunset"]);
-                    String sunriseStr = sunrise.ToString();
-                    weather.Sunrise = sunriseStr.Substring(9,9);
-                    String sunsetStr = sunset.ToString();
-                    weather.Sunset = sunsetStr.Substring(9,9);
+                    weather.Sunrise = sunrise.ToString() + " UTC";
+                    weather.Sunset = sunset.ToString() + " UTC";
                     return weather;
                 }
                 else
@@ -203,12 +200,12 @@ namespace WhetherU
         public class InstagramData
         {
 
-            public async void  runQuery(String queryString)
+            public async void runQuery(String queryString)
             {
                 var results = await DataService.GetDataFromService(queryString).ConfigureAwait(false);
                 Console.WriteLine(results);
             }
-            
+
         }
     }
 }
