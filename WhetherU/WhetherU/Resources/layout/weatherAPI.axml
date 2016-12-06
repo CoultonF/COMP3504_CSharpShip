@@ -2,115 +2,109 @@
 <AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <ImageView
-        android:id="@+id/imgAbsolute"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_x="0dp"
-        android:layout_y="0dp"
-        android:minWidth="50dp" />
-    <TextView
-        android:text="Location"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/locationLabel"
-        android:layout_x="50dp"
-        android:layout_y="50dp" />
-    <TextView
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/locationText"
-        android:layout_x="50dp"
-        android:layout_y="100dp" />
-    <TextView
-        android:text="Temperature"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_x="50dp"
-        android:layout_y="150dp" />
-    <TextView
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tempText"
-        android:layout_x="50dp"
-        android:layout_y="200dp" />
-    <TextView
-        android:text="Wind Speed"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/windLabel"
-        android:layout_x="50dp"
-        android:layout_y="250dp" />
-    <TextView
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/windText"
-        android:layout_x="50dp"
-        android:layout_y="300dp" />
-    <TextView
-        android:text="Humidity"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/humidtyLabel"
-        android:layout_x="50dp"
-        android:layout_y="350dp" />
-    <TextView
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/humidityText"
-        android:layout_x="50dp"
-        android:layout_y="400dp" />
-    <TextView
-        android:text="Visibility"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/visibilityLabel"
-        android:layout_x="50dp"
-        android:layout_y="450dp" />
-    <TextView
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/visibilityText"
-        android:layout_x="50dp"
-        android:layout_y="500dp" />
-    <TextView
-        android:text="Time of Sunrise"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/sunriseLabel"
-        android:layout_x="50dp"
-        android:layout_y="550dp" />
-    <TextView
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/sunriseText"
-        android:layout_x="50dp"
-        android:layout_y="600dp" />
-    <TextView
-        android:text="Time of Sunset"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/sunsetLabel"
-        android:layout_x="50dp"
-        android:layout_y="650dp" />
-    <TextView
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/sunsetText"
-        android:layout_x="50dp"
-        android:layout_y="700dp" />
+  <ImageView
+      android:id="@+id/imgAbsolute"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_x="0dp"
+      android:layout_y="0dp"
+      android:minWidth="50dp" />
+  <TextView
+      android:textAppearance="?android:attr/textAppearanceLarge"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/locationText"
+      android:layout_x="290dp"
+      android:textSize="50sp"
+      android:text="21C"
+      android:layout_y="400dp" />
+  <TextView
+      android:text="Temperature"
+        
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_x="50dp"
+      android:layout_y="150dp" />
+  <TextView
+      android:textAppearance="?android:attr/textAppearanceMedium"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/tempText"
+      android:layout_x="50dp"
+      android:layout_y="200dp" />
+  <TextView
+      android:text="Wind Speed"
+      android:textAppearance="?android:attr/textAppearanceSmall"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/windLabel"
+      android:layout_x="50dp"
+      android:layout_y="250dp" />
+  <TextView
+      android:textAppearance="?android:attr/textAppearanceMedium"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/windText"
+      android:layout_x="50dp"
+      android:layout_y="300dp" />
+  <TextView
+      android:text="Humidity"
+      android:textAppearance="?android:attr/textAppearanceSmall"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/humidtyLabel"
+      android:layout_x="50dp"
+      android:layout_y="350dp" />
+  <TextView
+      android:textAppearance="?android:attr/textAppearanceMedium"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/humidityText"
+      android:layout_x="50dp"
+      android:layout_y="400dp" />
+  <TextView
+      android:text="Visibility"
+      android:textAppearance="?android:attr/textAppearanceSmall"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/visibilityLabel"
+      android:layout_x="50dp"
+      android:layout_y="450dp" />
+  <TextView
+      android:textAppearance="?android:attr/textAppearanceMedium"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/visibilityText"
+      android:layout_x="50dp"
+      android:layout_y="500dp" />
+  <TextView
+      android:text="Time of Sunrise"
+      android:textAppearance="?android:attr/textAppearanceSmall"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/sunriseLabel"
+      android:layout_x="50dp"
+      android:layout_y="550dp" />
+  <TextView
+      android:textAppearance="?android:attr/textAppearanceMedium"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/sunriseText"
+      android:layout_x="50dp"
+      android:layout_y="600dp" />
+  <TextView
+      android:text="Time of Sunset"
+      android:textAppearance="?android:attr/textAppearanceSmall"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/sunsetLabel"
+      android:layout_x="50dp"
+      android:layout_y="650dp" />
+  <TextView
+      android:textAppearance="?android:attr/textAppearanceMedium"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/sunsetText"
+      android:layout_x="50dp"
+      android:layout_y="700dp" />
 </AbsoluteLayout>
