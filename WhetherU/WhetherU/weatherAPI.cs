@@ -163,10 +163,13 @@ namespace WhetherU
 
 
                     DateTime time = new System.DateTime(1970, 1, 1, 0, 0, 0, 0);
+                    
                     DateTime sunrise = time.AddSeconds((double)results["sys"]["sunrise"]);
                     DateTime sunset = time.AddSeconds((double)results["sys"]["sunset"]);
-                    weather.Sunrise = sunrise.ToString() + " UTC";
-                    weather.Sunset = sunset.ToString() + " UTC";
+                    String sunriseStr = sunrise.ToString();
+                    weather.Sunrise = sunriseStr.Substring(9,9);
+                    String sunsetStr = sunset.ToString();
+                    weather.Sunset = sunsetStr.Substring(9,9);
                     return weather;
                 }
                 else
