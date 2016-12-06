@@ -261,7 +261,8 @@ namespace DataBase
         public void updateLogin(string loginStr)
         {
             User user = getUser();
-            user.login = loginStr;
+            string name = user.name;
+            updateUserInfo(name, loginStr);
         }
         private void addCondition(Condition info)
         {
