@@ -242,10 +242,9 @@ namespace DataBase
             dbConnection.Delete<UILog>(id);
         }
 
-        public void updateUserInfo(string name, string loginStr)
+        public void updateUserInfo(User user)
         {
-            User info = new User(name, loginStr);
-            dbConnection.Update(info);
+            dbConnection.Update(user);
         }
         public User getUser()
         {
@@ -262,6 +261,8 @@ namespace DataBase
         {
             User user = getUser();
             user.login = loginStr;
+           // string name = user.name;
+            updateUserInfo(user);
         }
         private void addCondition(Condition info)
         {

@@ -98,11 +98,12 @@ namespace WhetherU
                     redirectUrl: new Uri(redirectUri));
                 var token = "";
                 LocalDataAccessLayer dataAc = LocalDataAccessLayer.getInstance();
-                User user = dataAc.getUser();
+                
             auth.Completed += (s, ee) => {
                     token = ee.Account.Properties["access_token"];
-                user.login = token;           
-                };
+                    dataAc.updateLogin(token);
+                User user = dataAc.getUser();
+            };
                 StartActivity(auth.GetUI(this));
 
                 auth.Completed += (sender, eventArgs) =>

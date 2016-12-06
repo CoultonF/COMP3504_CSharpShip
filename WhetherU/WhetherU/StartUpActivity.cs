@@ -27,46 +27,67 @@ namespace WhetherU
             base.OnCreate(bundle);
             RequestWindowFeature(WindowFeatures.NoTitle);
             // Set our view from the "main" layout resource
-            SetContentView(Resource.Layout.LoginPrompt);
+            string token;
 
-            // Get our button from the layout resource,
-            // and attach an event to it
-            ImageButton withInsta = FindViewById<ImageButton>(Resource.Id.UseInstagram);
-            ImageButton withoutInsta = FindViewById<ImageButton>(Resource.Id.NoInstagram);
+            LocalDataAccessLayer dataAc = LocalDataAccessLayer.getInstance();
+            User user;
+            try
+            {
+                user = dataAc.getUser();
+            }
+            catch (Exception e)
+            {
+                dataAc.addUser("Tory", "");
+                user = dataAc.getUser();
+            }
+            token = user.login;
+            if(token != null && token != "")
+            {
 
-            //button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
-            withInsta.Click += delegate {
-                Console.Write("Button Clicked");
+                Intent intent = new Intent(this, typeof(WeatherScreen));
+                Bundle data = new Bundle();
+                data.PutString("UserToken", token);
+                intent.PutExtras(data);
+                StartActivity(intent);
+            }
+            else {
+                SetContentView(Resource.Layout.LoginPrompt);
+
+                ImageButton withInsta = FindViewById<ImageButton>(Resource.Id.UseInstagram);
+                ImageButton withoutInsta = FindViewById<ImageButton>(Resource.Id.NoInstagram);
+
+                withInsta.Click += delegate {
+                    Console.Write("Button Clicked");
 
 
-                //if token is in database and not null then
-                //pull from DB
 
-                LocalDataAccessLayer dataAc = LocalDataAccessLayer.getInstance();
-                User user = dataAc.getUser();
-                //if token does not exist
-                if (user.login == "" || user.login == null)
-                {
-                    StartActivity(typeof(InstagramLogin));
-                }
+                    //if token does not exist
+                    if (user.login == ""|| user.login == null)
+                    {
+                        StartActivity(typeof(InstagramLogin));
+                    }
 
 
-                //if token exists
-                else
-                {
-                    user.login = "4156801757.33665d0.fb93e6ef964f4c5dbc665147ebab12a7";
-                    Intent intent = new Intent(this, typeof(WeatherScreen));
-                    Bundle data = new Bundle();
-                    data.PutString("UserToken", user.login);
-                    intent.PutExtras(data);
-                    StartActivity(intent);
-                }
-              
-            };
-            withoutInsta.Click += delegate {
-                Console.Write("Button Clicked");
-                StartActivity(typeof(WeatherScreen));
-            };
+                    //if token exists pull from DB
+                    else
+                    {
+                        token = user.login;
+                        Intent intent = new Intent(this, typeof(WeatherScreen));
+                        Bundle data = new Bundle();
+                        data.PutString("UserToken", token);
+                        intent.PutExtras(data);
+                        StartActivity(intent);
+                    }
+
+                };
+                withoutInsta.Click += delegate {
+                    Console.Write("Button Clicked");
+                    StartActivity(typeof(WeatherScreen));
+                };
+                
+            }
+
+            
         }
        
     }
