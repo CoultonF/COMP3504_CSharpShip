@@ -75,7 +75,6 @@ namespace WhetherU
             var mainActivity = new Intent(this, typeof(WeatherScreen));
             mainActivity.PutExtra("UserToken", token);
             StartActivity (mainActivity);
-            SetContentView(Resource.Layout.Main);
 
 
         }
