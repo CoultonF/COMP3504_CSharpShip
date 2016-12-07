@@ -21,6 +21,8 @@ using System.Net;
 //using System.Text;
 using Android.Graphics;
 using static Android.Widget.ImageView;
+using DataBase;
+using System.Text.RegularExpressions;
 
 namespace WhetherU
 {
@@ -30,24 +32,30 @@ namespace WhetherU
     public class WeatherScreen : Activity
     {
         string token;
+        string tagName;
 
         protected async override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-
             RequestWindowFeature(WindowFeatures.NoTitle);
 
             //Make token be pulled from DB
-            token = Intent.GetStringExtra("UserToken") ?? "False";
-            if (token != "False")
+            tagName = "cloudy";
+            token = Intent.GetStringExtra("UserToken") ?? "";
+            if (token != "")
             {
                 InstagramClient client = new InstagramClient(token);
-                MediasResponse media = await client.GetRecentMediaByTagName("cold");
+                MediasResponse media = await client.GetRecentMediaByTagName(tagName);
                 var datas = media.Data;
                 if (datas.Count > 0)
                 {
+                    Random rand = new Random();
+                    int index = rand.Next(0, media.Data.Count);
                     Bitmap imageBitmap = null;
-                    String url = media.Data.ElementAt<Media>(0).Images.StandardResolution.Url.ToString();
+                    String replacement = "p1080x1080";
+                    Regex rgx = new Regex(@"(s|p)\d\d\dx\d\d\d");
+                    String url = media.Data.ElementAt<Media>(index).Images.StandardResolution.Url.ToString();
+                    url = rgx.Replace(url, replacement);
                     using (var webClient = new WebClient())
                     {
                         var imageBytes = webClient.DownloadData(url);
@@ -70,7 +78,7 @@ namespace WhetherU
 
                     SetContentView(Resource.Layout.weatherAPI);
                     ImageView image = FindViewById<ImageView>(Resource.Id.imgAbsolute);
-                    //image.SetImageResource(Resource.Drawable.main);
+                    image.SetImageResource(Resource.Drawable.main);
                     runWeather("51.0114", "114.1288");
 
 
@@ -89,11 +97,17 @@ namespace WhetherU
             //button.Click += Button_Click;
         }
 
+        private void setInstagramImages()
+        {
+
+        }
+
 
         private async void runWeather(String lat, String lon)
         {
             //EditText zipCodeEntry = FindViewById<EditText>(Resource.Id.zipCodeEntry);
             Weather weather = await Core.GetWeather("51.0144", "114.1288");
+
             Typeface tf = Typeface.CreateFromAsset(Assets, "CaviarDreams.ttf");
 
 
@@ -131,6 +145,7 @@ namespace WhetherU
             public string Visibility { get; set; }
             public string Sunrise { get; set; }
             public string Sunset { get; set; }
+            public string Description { get; set; }
 
 
             public Weather()
@@ -173,7 +188,7 @@ namespace WhetherU
                     weather.Temperature = (string)results["main"]["temp"] + "°C";
                     weather.Wind = "Wind speeds of " + (string)results["wind"]["speed"] + " kph";
                     weather.Visibility = (string)results["weather"][0]["main"];
-
+                    weather.Description = (string)results["weather"][0]["description"];
 
                     DateTime time = new System.DateTime(1970, 1, 1, 0, 0, 0, 0);
                     DateTime sunrise = time.AddSeconds((double)results["sys"]["sunrise"]);
