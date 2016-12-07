@@ -146,6 +146,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <AndroidAsset Include="Assets\CaviarDreams.ttf" />
     <None Include="GettingStarted.Xamarin" />
     <None Include="Instagram\Instagram.Client\packages.config" />
     <None Include="Instagram\Instagram.Models\packages.config" />

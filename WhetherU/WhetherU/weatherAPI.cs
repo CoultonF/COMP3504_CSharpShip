@@ -63,8 +63,6 @@ namespace WhetherU
                     image.SetScaleType(ScaleType.CenterCrop);
                     runWeather("51.0114", "114.1288");
 
-
-
                 }
                 else
                 {
@@ -96,20 +94,35 @@ namespace WhetherU
         {
             //EditText zipCodeEntry = FindViewById<EditText>(Resource.Id.zipCodeEntry);
             Weather weather = await Core.GetWeather("51.0144", "114.1288");
-            FindViewById<TextView>(Resource.Id.locationText).Text = weather.Title;
-            FindViewById<TextView>(Resource.Id.tempText).Text = weather.Temperature;
-            FindViewById<TextView>(Resource.Id.windText).Text = weather.Wind;
-            FindViewById<TextView>(Resource.Id.visibilityText).Text = weather.Visibility;
-            FindViewById<TextView>(Resource.Id.sunriseText).Text = weather.Sunrise;
-            FindViewById<TextView>(Resource.Id.sunsetText).Text = weather.Sunset;
+            Typeface tf = Typeface.CreateFromAsset(Assets, "CaviarDreams.ttf");
+
+
+            var locationText = FindViewById<TextView>(Resource.Id.locationText);
+            locationText.Text = weather.Title;
+            var tempText = FindViewById<TextView>(Resource.Id.tempText);
+            tempText.Text = weather.Temperature;
+            var windText = FindViewById<TextView>(Resource.Id.windText);
+            windText.Text = weather.Wind;
+            var visibilityText = FindViewById<TextView>(Resource.Id.visibilityText);
+            visibilityText.Text = weather.Visibility;
+            var sunriseText = FindViewById<TextView>(Resource.Id.sunriseText);
+            sunriseText.Text = weather.Sunrise;
+            var sunsetText = FindViewById<TextView>(Resource.Id.sunsetText);
+            sunsetText.Text = weather.Sunset;
+
+            locationText.SetTypeface(tf, TypefaceStyle.Bold);
+            tempText.SetTypeface(tf, TypefaceStyle.Bold);
+            windText.SetTypeface(tf, TypefaceStyle.Normal);
+            visibilityText.SetTypeface(tf, TypefaceStyle.Normal);
+            sunriseText.SetTypeface(tf, TypefaceStyle.Bold);
+            sunsetText.SetTypeface(tf, TypefaceStyle.Bold);
 
             //if (!String.IsNullOrEmpty(zipCodeEntry.Text))
             //{
 
             //}
         }
-
-
+        
         public class Weather
         {
             public string Title { get; set; }
@@ -165,8 +178,10 @@ namespace WhetherU
                     DateTime time = new System.DateTime(1970, 1, 1, 0, 0, 0, 0);
                     DateTime sunrise = time.AddSeconds((double)results["sys"]["sunrise"]);
                     DateTime sunset = time.AddSeconds((double)results["sys"]["sunset"]);
-                    weather.Sunrise = sunrise.ToString() + " UTC";
-                    weather.Sunset = sunset.ToString() + " UTC";
+                    String sunriseText = sunrise.ToString();
+                    weather.Sunrise = sunriseText.Substring(9, 9);
+                    String sunsetText = sunset.ToString();
+                    weather.Sunset = sunsetText.Substring(9, 9);
                     return weather;
                 }
                 else
