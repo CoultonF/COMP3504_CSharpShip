@@ -286,6 +286,13 @@ namespace DataBase
             // string name = user.name;
             updateUserInfo(user);
         }
+        public void updateName(string nameStr)
+        {
+            User user = getUser();
+            user.name = nameStr;
+            // string name = user.name;
+            updateUserInfo(user);
+        }
         private void addCondition(Condition info)
         {
             dbConnection.Insert(info);
