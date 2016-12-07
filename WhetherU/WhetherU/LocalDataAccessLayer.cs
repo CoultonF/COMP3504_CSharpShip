@@ -173,7 +173,7 @@ namespace DataBase
             message += getFeeling(currCon, currTemp, currWnd);
             return message;
         }
-        private string getGreeting()
+        public string getGreeting()
         {
             DateTime currTime = DateTime.Now;
             string greeting = "";

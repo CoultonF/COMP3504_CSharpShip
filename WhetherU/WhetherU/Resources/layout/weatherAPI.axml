@@ -26,26 +26,47 @@
         android:scaleType="fitEnd"
         android:src="@drawable/suncloud" />
     <TextView
-        android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/locationText"
+        android:id="@+id/greeting"
         android:layout_x="0dp"
         android:gravity="center"
-        android:textSize="20sp"
-        android:text="City"
-        android:layout_y="525dp"/>
+        android:textSize="40sp"
+        android:text="Good Evening Coulton!"
+        android:layout_y="280dp"
+        android:textColor="#ffffff" />
     <TextView
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tempText"
-        android:textSize="100sp"
+        android:textSize="90sp"
         android:text="21C"
         android:layout_x="0dp"
         android:textColor="#ffffff"
         android:gravity="center"
         android:layout_y="350dp" />
+  <TextView
+      android:textAppearance="?android:attr/textAppearanceMedium"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/visibilityText"
+      android:layout_x="0dp"
+      android:text="Weather"
+      android:textSize="40sp"
+      android:textColor="#c4c4c4"
+      android:gravity="center"
+      android:layout_y="470dp" />
+  <TextView
+      android:textAppearance="?android:attr/textAppearanceLarge"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/locationText"
+      android:layout_x="0dp"
+      android:gravity="center"
+      android:textSize="20sp"
+      android:text="City"
+      android:layout_y="525dp" />
     <TextView
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_width="match_parent"
@@ -61,9 +82,9 @@
         android:layout_x="0dp"
         android:gravity="center"
         android:text="Wind"
-        android:textSize="30sp"
+        android:textSize="15sp"
         android:textColor="#c4c4c4"
-        android:layout_y="550dp" />
+        android:layout_y="560dp" />
     <TextView
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_width="match_parent"
@@ -71,17 +92,6 @@
         android:id="@+id/visibilityLabel"
         android:layout_x="50dp"
         android:layout_y="450dp" />
-    <TextView
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/visibilityText"
-        android:layout_x="0dp"
-        android:text="Weather"
-        android:textSize="40sp"
-        android:textColor="#c4c4c4"
-        android:gravity="center"
-        android:layout_y="470dp" />
     <TextView
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_width="match_parent"
@@ -96,7 +106,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/sunsetLabel"
         android:layout_x="50dp"
-        android:layout_y="650dp"/>
+        android:layout_y="650dp" />
     <ImageView
         android:id="@+id/sunrise"
         android:layout_width="130dp"
@@ -113,24 +123,24 @@
         android:src="@drawable/sunset"
         android:layout_x="460dp"
         android:layout_y="810dp" />
-    <TextView
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/sunsetText"
-        android:text="SunsetTime"
-        android:layout_x="450dp"
-        android:layout_y="860dp"
-        android:textSize="29sp"
-        android:textColor="#000000" />
-    <TextView
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/sunriseText"
-        android:text="SunriseTime"
-        android:layout_x="10dp"
-        android:layout_y="860dp"
-        android:textSize="29sp"
-        android:textColor="#000000" />
+  <TextView
+      android:textAppearance="?android:attr/textAppearanceMedium"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/sunsetText"
+      android:text="SunsetTime"
+      android:layout_x="450dp"
+      android:layout_y="860dp"
+      android:textSize="29sp"
+      android:textColor="#ffffff" />
+  <TextView
+      android:textAppearance="?android:attr/textAppearanceMedium"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/sunriseText"
+      android:text="SunriseTime"
+      android:layout_x="10dp"
+      android:layout_y="860dp"
+      android:textSize="29sp"
+      android:textColor="#000000" />
 </AbsoluteLayout>

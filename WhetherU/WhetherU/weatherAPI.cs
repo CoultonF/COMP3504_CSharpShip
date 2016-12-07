@@ -27,7 +27,6 @@ using System.Text.RegularExpressions;
 namespace WhetherU
 {
 
-
     [Activity(Label = "weatherAPI", MainLauncher = false, Icon = "@drawable/icon")]
     public class WeatherScreen : Activity
     {
@@ -40,7 +39,7 @@ namespace WhetherU
             RequestWindowFeature(WindowFeatures.NoTitle);
 
             //Make token be pulled from DB
-            tagName = "cloudy";
+            tagName = "clouds";
             token = Intent.GetStringExtra("UserToken") ?? "";
             if (token != "")
             {
@@ -192,11 +191,13 @@ namespace WhetherU
 
                     DateTime time = new System.DateTime(1970, 1, 1, 0, 0, 0, 0);
                     DateTime sunrise = time.AddSeconds((double)results["sys"]["sunrise"]);
+                    sunrise.ToLocalTime();
                     DateTime sunset = time.AddSeconds((double)results["sys"]["sunset"]);
+                    sunset.ToLocalTime();
                     String sunriseText = sunrise.ToString();
-                    weather.Sunrise = sunriseText.Substring(9, 9);
+                    weather.Sunrise = sunriseText.Substring(9, 6);
                     String sunsetText = sunset.ToString();
-                    weather.Sunset = sunsetText.Substring(9, 9);
+                    weather.Sunset = sunsetText.Substring(9, 6);
                     return weather;
                 }
                 else
