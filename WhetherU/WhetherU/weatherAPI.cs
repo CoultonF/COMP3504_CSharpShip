@@ -121,6 +121,8 @@ namespace WhetherU
             sunriseText.Text = weather.Sunrise;
             var sunsetText = FindViewById<TextView>(Resource.Id.sunsetText);
             sunsetText.Text = weather.Sunset;
+            var greeting = FindViewById<TextView>(Resource.Id.greeting);
+            greeting.Text = weather.Greeting;
 
             locationText.SetTypeface(tf, TypefaceStyle.Bold);
             tempText.SetTypeface(tf, TypefaceStyle.Bold);
@@ -128,6 +130,7 @@ namespace WhetherU
             visibilityText.SetTypeface(tf, TypefaceStyle.Normal);
             sunriseText.SetTypeface(tf, TypefaceStyle.Bold);
             sunsetText.SetTypeface(tf, TypefaceStyle.Bold);
+            greeting.SetTypeface(tf, TypefaceStyle.Bold);
 
             //if (!String.IsNullOrEmpty(zipCodeEntry.Text))
             //{
@@ -144,6 +147,7 @@ namespace WhetherU
             public string Sunrise { get; set; }
             public string Sunset { get; set; }
             public string Description { get; set; }
+            public string Greeting { get; set; }
 
 
             public Weather()
@@ -156,6 +160,7 @@ namespace WhetherU
                 this.Visibility = " ";
                 this.Sunrise = " ";
                 this.Sunset = " ";
+                this.Greeting = " ";
             }
         }
 
@@ -197,6 +202,8 @@ namespace WhetherU
                     weather.Sunrise = "8:27";
                     String sunsetText = sunset.ToString();
                     weather.Sunset = "16:30";
+
+                    weather.Greeting = getGreeting();
                     return weather;
                 }
                 else
@@ -204,6 +211,25 @@ namespace WhetherU
                     return null;
                 }
             }
+        }
+        public static string getGreeting()
+        {
+            DateTime currTime = DateTime.Now;
+            string greeting = "";
+            int hour = currTime.Hour;
+            if (hour > 0 && hour < 12)
+            {
+                greeting = "Good Morning, ";
+            }
+            else if (hour >= 12 && hour < 17)
+            {
+                greeting = "Good Afternoon, ";
+            }
+            else
+            {
+                greeting = "Good Evening, ";
+            }
+            return greeting;
         }
 
 
