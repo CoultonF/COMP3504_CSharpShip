@@ -219,15 +219,15 @@ namespace WhetherU
             int hour = currTime.Hour;
             if (hour > 0 && hour < 12)
             {
-                greeting = "Good Morning, ";
+                greeting = "Good Morning, " + "csharpship1" + ".";
             }
             else if (hour >= 12 && hour < 17)
             {
-                greeting = "Good Afternoon, ";
+                greeting = "Good Afternoon, " + "csharpship1" + ".";
             }
             else
             {
-                greeting = "Good Evening, ";
+                greeting = "Good Evening, " + "csharpship1" + ".";
             }
             return greeting;
         }
