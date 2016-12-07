@@ -64,6 +64,7 @@ namespace WhetherU
         }
         
 
+
         public async void runApp(String token)
         {
 
@@ -71,7 +72,7 @@ namespace WhetherU
 
             await InstagramClient.GetMyUserAsync();
 
-            Console.Write(InstagramClient.GetType());
+            Console.Write(InstagramClient.GetMyUserAsync());
             var mainActivity = new Intent(this, typeof(WeatherScreen));
             mainActivity.PutExtra("UserToken", token);
             StartActivity (mainActivity);

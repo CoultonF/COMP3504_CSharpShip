@@ -32,12 +32,37 @@ namespace WhetherU
     {
         string token;
         string tagName;
-
+        public static string getGreeting()
+        {
+            String name = "User";
+            LocalDataAccessLayer dataAc = LocalDataAccessLayer.getInstance();
+            DataBase.User user;
+                
+                user = dataAc.getUser();
+                name = user.name;
+                DateTime currTime = DateTime.Now;
+            string greeting = "";
+            int hour = currTime.Hour;
+            if (hour > 0 && hour < 12)
+            {
+                greeting = "Good Morning, " + name + ".";
+            }
+            else if (hour >= 12 && hour < 17)
+            {
+                greeting = "Good Afternoon, " + name + ".";
+            }
+            else
+            {
+                greeting = "Good Evening, " + name + ".";
+            }
+            return greeting;
+        }
         protected async override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
             RequestWindowFeature(WindowFeatures.NoTitle);
-            tagName = "clouds";
+            Weather weather = await Core.GetWeather("51.0144", "114.1288");
+            tagName = weather.Visibility.ToLower();
             token = Intent.GetStringExtra("UserToken") ?? "";
             if (token != "")
             {
@@ -68,6 +93,7 @@ namespace WhetherU
                     image.SetImageBitmap(imageBitmap);
                     image.SetScaleType(ScaleType.CenterCrop);
                     runWeather("51.0114", "114.1288");
+                    getGreeting();
 
                 }
                 else
@@ -82,18 +108,19 @@ namespace WhetherU
 
                 }
             }
+            
 
-            // Set our view from the "main" layout resource
-            //SetContentView(Resource.Layout.weatherAPI);
-
-
-            // Get our button from the layout resource,
-            // and attach an event to it
-            //Button button = FindViewById<Button>(Resource.Id.weatherBtn);
+        // Set our view from the "main" layout resource
+        //SetContentView(Resource.Layout.weatherAPI);
 
 
-            //button.Click += Button_Click;
-        }
+        // Get our button from the layout resource,
+        // and attach an event to it
+        //Button button = FindViewById<Button>(Resource.Id.weatherBtn);
+
+
+        //button.Click += Button_Click;
+    }
 
         private void setInstagramImages()
         {
@@ -212,25 +239,7 @@ namespace WhetherU
                 }
             }
         }
-        public static string getGreeting()
-        {
-            DateTime currTime = DateTime.Now;
-            string greeting = "";
-            int hour = currTime.Hour;
-            if (hour > 0 && hour < 12)
-            {
-                greeting = "Good Morning, " + "csharpship1" + ".";
-            }
-            else if (hour >= 12 && hour < 17)
-            {
-                greeting = "Good Afternoon, " + "csharpship1" + ".";
-            }
-            else
-            {
-                greeting = "Good Evening, " + "csharpship1" + ".";
-            }
-            return greeting;
-        }
+        
 
 
         public class DataService
