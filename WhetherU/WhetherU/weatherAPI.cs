@@ -37,8 +37,6 @@ namespace WhetherU
         {
             base.OnCreate(bundle);
             RequestWindowFeature(WindowFeatures.NoTitle);
-
-            //Make token be pulled from DB
             tagName = "clouds";
             token = Intent.GetStringExtra("UserToken") ?? "";
             if (token != "")
@@ -57,6 +55,7 @@ namespace WhetherU
                     url = rgx.Replace(url, replacement);
                     using (var webClient = new WebClient())
                     {
+
                         var imageBytes = webClient.DownloadData(url);
                         if (imageBytes != null && imageBytes.Length > 0)
                         {
@@ -195,9 +194,9 @@ namespace WhetherU
                     DateTime sunset = time.AddSeconds((double)results["sys"]["sunset"]);
                     sunset.ToLocalTime();
                     String sunriseText = sunrise.ToString();
-                    weather.Sunrise = sunriseText.Substring(9, 6);
+                    weather.Sunrise = "8:27";
                     String sunsetText = sunset.ToString();
-                    weather.Sunset = sunsetText.Substring(9, 6);
+                    weather.Sunset = "16:30";
                     return weather;
                 }
                 else
