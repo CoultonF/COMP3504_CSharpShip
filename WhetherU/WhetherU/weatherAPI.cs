@@ -24,7 +24,7 @@ using static Android.Widget.ImageView;
 
 namespace WhetherU
 {
-    
+
 
     [Activity(Label = "weatherAPI", MainLauncher = false, Icon = "@drawable/icon")]
     public class WeatherScreen : Activity
@@ -64,10 +64,10 @@ namespace WhetherU
                     ImageView image = FindViewById<ImageView>(Resource.Id.imgAbsolute);
                     image.SetImageBitmap(imageBitmap);
                     image.SetScaleType(ScaleType.CenterCrop);
-                    runWeather("51.0114","114.1288");
-                    
-                
-                    
+                    runWeather("51.0114", "114.1288");
+
+
+
                 }
                 else
                 {
@@ -78,7 +78,7 @@ namespace WhetherU
                     image.SetImageResource(Resource.Drawable.main);
                     runWeather("51.0114", "114.1288");
 
-                    
+
                 }
             }
 
@@ -109,7 +109,6 @@ namespace WhetherU
             FindViewById<TextView>(Resource.Id.tempText).Text = weather.Temperature;
             FindViewById<TextView>(Resource.Id.windText).Text = weather.Wind;
             FindViewById<TextView>(Resource.Id.visibilityText).Text = weather.Visibility;
-            FindViewById<TextView>(Resource.Id.humidityText).Text = weather.Humidity;
             FindViewById<TextView>(Resource.Id.sunriseText).Text = weather.Sunrise;
             FindViewById<TextView>(Resource.Id.sunsetText).Text = weather.Sunset;
 
@@ -125,7 +124,6 @@ namespace WhetherU
             public string Title { get; set; }
             public string Temperature { get; set; }
             public string Wind { get; set; }
-            public string Humidity { get; set; }
             public string Visibility { get; set; }
             public string Sunrise { get; set; }
             public string Sunset { get; set; }
@@ -139,7 +137,6 @@ namespace WhetherU
                 this.Title = " ";
                 this.Temperature = " ";
                 this.Wind = " ";
-                this.Humidity = " ";
                 this.Visibility = " ";
                 this.Sunrise = " ";
                 this.Sunset = " ";
@@ -170,9 +167,8 @@ namespace WhetherU
                 {
                     Weather weather = new Weather();
                     weather.Title = (string)results["name"];
-                    weather.Temperature = (string)results["main"]["temp"] + " F";
-                    weather.Wind = (string)results["wind"]["speed"] + " mph";
-                    weather.Humidity = (string)results["main"]["humidity"] + " %";
+                    weather.Temperature = (string)results["main"]["temp"] + "°C";
+                    weather.Wind = "Wind speeds of " + (string)results["wind"]["speed"] + " kph";
                     weather.Visibility = (string)results["weather"][0]["main"];
                     weather.Description = (string)results["weather"][0]["description"];
 
@@ -214,12 +210,12 @@ namespace WhetherU
         public class InstagramData
         {
 
-            public async void  runQuery(String queryString)
+            public async void runQuery(String queryString)
             {
                 var results = await DataService.GetDataFromService(queryString).ConfigureAwait(false);
                 Console.WriteLine(results);
             }
-            
+
         }
     }
 }

@@ -40,8 +40,9 @@ namespace WhetherU
                 dataAc.addUser("User", "");
                 user = dataAc.getUser();
             }
+
             token = user.login;
-            if(token != null && token != "")
+            if (token != null && token != "")
             {
 
                 Intent intent = new Intent(this, typeof(WeatherScreen));
@@ -50,7 +51,8 @@ namespace WhetherU
                 intent.PutExtras(data);
                 StartActivity(intent);
             }
-            else {
+            else
+            {
                 SetContentView(Resource.Layout.LoginPrompt);
 
                 ImageButton withInsta = FindViewById<ImageButton>(Resource.Id.UseInstagram);
@@ -62,7 +64,7 @@ namespace WhetherU
 
 
                     //if token does not exist
-                    if (user.login == ""|| user.login == null)
+                    if (user.login == "" || user.login == null)
                     {
                         StartActivity(typeof(InstagramLogin));
                     }
@@ -84,12 +86,12 @@ namespace WhetherU
                     Console.Write("Button Clicked");
                     StartActivity(typeof(WeatherScreen));
                 };
-                
+
             }
 
-            
+
         }
-       
+
     }
 }
 
