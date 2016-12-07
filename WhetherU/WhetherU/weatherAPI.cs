@@ -21,6 +21,8 @@ using System.Net;
 //using System.Text;
 using Android.Graphics;
 using static Android.Widget.ImageView;
+using DataBase;
+using System.Text.RegularExpressions;
 
 namespace WhetherU
 {
@@ -35,10 +37,10 @@ namespace WhetherU
         protected async override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-
             RequestWindowFeature(WindowFeatures.NoTitle);
 
             //Make token be pulled from DB
+            tagName = "cloudy";
             token = Intent.GetStringExtra("UserToken") ?? "";
             if (token != "")
             {
@@ -50,7 +52,10 @@ namespace WhetherU
                     Random rand = new Random();
                     int index = rand.Next(0, media.Data.Count);
                     Bitmap imageBitmap = null;
+                    String replacement = "p1080x1080";
+                    Regex rgx = new Regex(@"(s|p)\d\d\dx\d\d\d");
                     String url = media.Data.ElementAt<Media>(index).Images.StandardResolution.Url.ToString();
+                    url = rgx.Replace(url, replacement);
                     using (var webClient = new WebClient())
                     {
                         var imageBytes = webClient.DownloadData(url);
