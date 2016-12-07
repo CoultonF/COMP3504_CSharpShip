@@ -95,6 +95,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Condition.cs" />
+    <Compile Include="DemoMenu.cs" />
     <Compile Include="LocalDataAccessLayer.cs" />
     <Compile Include="Temperature.cs" />
     <Compile Include="UILog.cs" />
@@ -156,6 +157,9 @@
     <AndroidResource Include="Resources\layout\LoginPrompt.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\demoMenu.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\weatherAPI.axml">
@@ -193,6 +197,7 @@
     <AndroidResource Include="Resources\drawable\sunset.png" />
     <AndroidResource Include="Resources\drawable\suncloud.png" />
     <AndroidResource Include="Resources\drawable\sunrise.png" />
+    <AndroidResource Include="Resources\drawable\menu.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />

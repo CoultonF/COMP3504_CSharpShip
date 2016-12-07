@@ -55,22 +55,25 @@ namespace WhetherU
 			public const int main = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int suncloud = 2130837507;
+			public const int menu = 2130837507;
 			
 			// aapt resource value: 0x7f020004
-			public const int sunrise = 2130837508;
+			public const int suncloud = 2130837508;
 			
 			// aapt resource value: 0x7f020005
-			public const int sunset = 2130837509;
+			public const int sunrise = 2130837509;
 			
 			// aapt resource value: 0x7f020006
-			public const int title = 2130837510;
+			public const int sunset = 2130837510;
 			
 			// aapt resource value: 0x7f020007
-			public const int withIG = 2130837511;
+			public const int title = 2130837511;
 			
 			// aapt resource value: 0x7f020008
-			public const int withoutIG = 2130837512;
+			public const int withIG = 2130837512;
+			
+			// aapt resource value: 0x7f020009
+			public const int withoutIG = 2130837513;
 			
 			static Drawable()
 			{
@@ -85,62 +88,71 @@ namespace WhetherU
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050002
-			public const int NoInstagram = 2131034114;
-			
-			// aapt resource value: 0x7f050000
-			public const int Title = 2131034112;
-			
 			// aapt resource value: 0x7f050001
-			public const int UseInstagram = 2131034113;
+			public const int NextImage = 2131034113;
 			
 			// aapt resource value: 0x7f050004
-			public const int blackBox = 2131034116;
+			public const int NoInstagram = 2131034116;
 			
-			// aapt resource value: 0x7f050006
-			public const int greeting = 2131034118;
+			// aapt resource value: 0x7f050000
+			public const int SignOut = 2131034112;
+			
+			// aapt resource value: 0x7f050002
+			public const int Title = 2131034114;
 			
 			// aapt resource value: 0x7f050003
-			public const int imgAbsolute = 2131034115;
+			public const int UseInstagram = 2131034115;
 			
-			// aapt resource value: 0x7f050009
-			public const int locationText = 2131034121;
+			// aapt resource value: 0x7f050006
+			public const int blackBox = 2131034118;
 			
-			// aapt resource value: 0x7f050005
-			public const int suncloud = 2131034117;
-			
-			// aapt resource value: 0x7f05000f
-			public const int sunrise = 2131034127;
-			
-			// aapt resource value: 0x7f05000d
-			public const int sunriseLabel = 2131034125;
-			
-			// aapt resource value: 0x7f050012
-			public const int sunriseText = 2131034130;
-			
-			// aapt resource value: 0x7f050010
-			public const int sunset = 2131034128;
-			
-			// aapt resource value: 0x7f05000e
-			public const int sunsetLabel = 2131034126;
-			
-			// aapt resource value: 0x7f050011
-			public const int sunsetText = 2131034129;
-			
-			// aapt resource value: 0x7f050007
-			public const int tempText = 2131034119;
-			
-			// aapt resource value: 0x7f05000c
-			public const int visibilityLabel = 2131034124;
+			// aapt resource value: 0x7f050013
+			public const int demoMenu = 2131034131;
 			
 			// aapt resource value: 0x7f050008
-			public const int visibilityText = 2131034120;
+			public const int greeting = 2131034120;
 			
-			// aapt resource value: 0x7f05000a
-			public const int windLabel = 2131034122;
+			// aapt resource value: 0x7f050005
+			public const int imgAbsolute = 2131034117;
 			
 			// aapt resource value: 0x7f05000b
-			public const int windText = 2131034123;
+			public const int locationText = 2131034123;
+			
+			// aapt resource value: 0x7f050007
+			public const int suncloud = 2131034119;
+			
+			// aapt resource value: 0x7f050011
+			public const int sunrise = 2131034129;
+			
+			// aapt resource value: 0x7f05000f
+			public const int sunriseLabel = 2131034127;
+			
+			// aapt resource value: 0x7f050015
+			public const int sunriseText = 2131034133;
+			
+			// aapt resource value: 0x7f050012
+			public const int sunset = 2131034130;
+			
+			// aapt resource value: 0x7f050010
+			public const int sunsetLabel = 2131034128;
+			
+			// aapt resource value: 0x7f050014
+			public const int sunsetText = 2131034132;
+			
+			// aapt resource value: 0x7f050009
+			public const int tempText = 2131034121;
+			
+			// aapt resource value: 0x7f05000e
+			public const int visibilityLabel = 2131034126;
+			
+			// aapt resource value: 0x7f05000a
+			public const int visibilityText = 2131034122;
+			
+			// aapt resource value: 0x7f05000c
+			public const int windLabel = 2131034124;
+			
+			// aapt resource value: 0x7f05000d
+			public const int windText = 2131034125;
 			
 			static Id()
 			{
@@ -156,10 +168,13 @@ namespace WhetherU
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int LoginPrompt = 2130903040;
+			public const int demoMenu = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int weatherAPI = 2130903041;
+			public const int LoginPrompt = 2130903041;
+			
+			// aapt resource value: 0x7f030002
+			public const int weatherAPI = 2130903042;
 			
 			static Layout()
 			{

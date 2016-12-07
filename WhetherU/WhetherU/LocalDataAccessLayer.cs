@@ -274,7 +274,10 @@ namespace DataBase
         }
         public void deleteUser()
         {
-            dbConnection.Delete<User>(1);
+            User user = getUser();
+            user.login = "";
+            user.name = "";
+            updateUserInfo(user);
         }
         public void updateLogin(string loginStr)
         {
