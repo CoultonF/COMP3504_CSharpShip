@@ -39,8 +39,8 @@ namespace WhetherU
             base.OnCreate(bundle);
             RequestWindowFeature(WindowFeatures.NoTitle);
 
-            //Make token be pulled from DB
-            tagName = "cloudy";
+            //tagName = visibility.ToLower();
+            tagName = "clouds";
             token = Intent.GetStringExtra("UserToken") ?? "";
             if (token != "")
             {
@@ -58,6 +58,7 @@ namespace WhetherU
                     url = rgx.Replace(url, replacement);
                     using (var webClient = new WebClient())
                     {
+
                         var imageBytes = webClient.DownloadData(url);
                         if (imageBytes != null && imageBytes.Length > 0)
                         {
