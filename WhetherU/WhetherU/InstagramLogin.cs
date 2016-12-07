@@ -53,15 +53,9 @@ namespace WhetherU
 
                 var info = await InstagramClient.GetMyUserAsync();
 
-                info.Data.Username
+                //info.Data.Username;
                 
                 sUsername = info.Data.Username;
-                Account account = new Account
-                {
-                    Username = info.Data.Username
-                };
-                account.Properties.Add("Token", token);
-                AccountStore.Create(this).Save(account, "WhetherU");
             }
         }
         
@@ -104,7 +98,9 @@ namespace WhetherU
                     token = ee.Account.Properties["access_token"];
                 //ee.Account.Properties[]
                 dataAc.updateLogin(token);
-                dataAc.updateName(sUsername);
+                SaveCredentials(token);
+                dataAc.updateName("Joe");
+                
                 User user = dataAc.getUser();
             };
                 StartActivity(auth.GetUI(this));
