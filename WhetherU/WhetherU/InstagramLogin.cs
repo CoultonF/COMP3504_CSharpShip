@@ -18,10 +18,11 @@ using SQLite;
 
 namespace WhetherU
 {
+    
     [Activity(Label = "InstagramSignIn")]
     public class InstagramLogin : Activity
     {
-
+        private string sUsername;
         //public static OAuthSettings XamarinAuthSettings { get; private set; }
 
         /// <summary>
@@ -52,8 +53,9 @@ namespace WhetherU
 
                 var info = await InstagramClient.GetMyUserAsync();
 
-                Console.WriteLine(info.Data.Username);
-
+                info.Data.Username
+                
+                sUsername = info.Data.Username;
                 Account account = new Account
                 {
                     Username = info.Data.Username
@@ -71,7 +73,6 @@ namespace WhetherU
             var InstagramClient = new InstagramClient(token);
 
             await InstagramClient.GetMyUserAsync();
-
             Console.Write(InstagramClient.GetMyUserAsync());
             var mainActivity = new Intent(this, typeof(WeatherScreen));
             mainActivity.PutExtra("UserToken", token);
@@ -101,7 +102,9 @@ namespace WhetherU
                 
             auth.Completed += (s, ee) => {
                     token = ee.Account.Properties["access_token"];
-                    dataAc.updateLogin(token);
+                //ee.Account.Properties[]
+                dataAc.updateLogin(token);
+                dataAc.updateName(sUsername);
                 User user = dataAc.getUser();
             };
                 StartActivity(auth.GetUI(this));

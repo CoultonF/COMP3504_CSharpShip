@@ -118,9 +118,16 @@ namespace WhetherU
         // and attach an event to it
         //Button button = FindViewById<Button>(Resource.Id.weatherBtn);
 
+            //button.Click += Button_Click;
 
-        //button.Click += Button_Click;
-    }
+            ImageButton demo = FindViewById<ImageButton>(Resource.Id.demoMenu);
+            demo.Click += delegate
+            {
+                Intent intent = new Intent(this.ApplicationContext, typeof(DemoMenuActivity));
+                intent.SetFlags(ActivityFlags.NewTask);
+                StartActivity(intent);
+            };
+        }
 
         private void setInstagramImages()
         {
@@ -164,7 +171,7 @@ namespace WhetherU
 
             //}
         }
-        
+
         public class Weather
         {
             public string Title { get; set; }
@@ -274,7 +281,3 @@ namespace WhetherU
         }
     }
 }
-
-
-
-
