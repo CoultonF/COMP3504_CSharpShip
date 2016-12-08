@@ -71,13 +71,7 @@ namespace WhetherU
                 var datas = media.Data;
                 if (datas.Count > 0)
                 {
-                    ImageButton demo = FindViewById<ImageButton>(Resource.Id.demoMenu);
-                    demo.Click += delegate
-                    {
-                        Intent intent = new Intent(this.ApplicationContext, typeof(DemoMenuActivity));
-                        intent.SetFlags(ActivityFlags.NewTask);
-                        StartActivity(intent);
-                    };
+                    
                     Random rand = new Random();
                     int index = rand.Next(0, media.Data.Count);
                     Bitmap imageBitmap = null;
@@ -103,6 +97,13 @@ namespace WhetherU
                     getGreeting();
 
                 }
+                ImageButton demo = FindViewById<ImageButton>(Resource.Id.demoMenu);
+                demo.Click += delegate
+                {
+                    Intent intent = new Intent(this.ApplicationContext, typeof(DemoMenuActivity));
+                    intent.SetFlags(ActivityFlags.NewTask);
+                    StartActivity(intent);
+                };
             }
             else
             {
