@@ -22,7 +22,7 @@ namespace WhetherU
     [Activity(Label = "InstagramSignIn")]
     public class InstagramLogin : Activity
     {
-        private string sUsername;
+
         //public static OAuthSettings XamarinAuthSettings { get; private set; }
 
         /// <summary>
@@ -55,7 +55,6 @@ namespace WhetherU
 
                 //info.Data.Username;
                 
-                sUsername = info.Data.Username;
             }
         }
         
@@ -98,8 +97,11 @@ namespace WhetherU
                     token = ee.Account.Properties["access_token"];
                 //ee.Account.Properties[]
                 dataAc.updateLogin(token);
-                SaveCredentials(token);
-                dataAc.updateName("Joe");
+                //SaveCredentials(token);
+                //var InstagramClient = new InstagramClient(token);
+
+                //var info = await InstagramClient.GetMyUserAsync();
+                dataAc.updateName("User");
                 
                 User user = dataAc.getUser();
             };

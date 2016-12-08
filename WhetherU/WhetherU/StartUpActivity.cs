@@ -84,7 +84,10 @@ namespace WhetherU
                 };
                 withoutInsta.Click += delegate {
                     Console.Write("Button Clicked");
+                    
+
                     StartActivity(typeof(WeatherScreen));
+
                 };
 
             }

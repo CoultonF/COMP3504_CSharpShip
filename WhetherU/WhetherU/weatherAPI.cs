@@ -71,6 +71,13 @@ namespace WhetherU
                 var datas = media.Data;
                 if (datas.Count > 0)
                 {
+                    ImageButton demo = FindViewById<ImageButton>(Resource.Id.demoMenu);
+                    demo.Click += delegate
+                    {
+                        Intent intent = new Intent(this.ApplicationContext, typeof(DemoMenuActivity));
+                        intent.SetFlags(ActivityFlags.NewTask);
+                        StartActivity(intent);
+                    };
                     Random rand = new Random();
                     int index = rand.Next(0, media.Data.Count);
                     Bitmap imageBitmap = null;
@@ -96,18 +103,20 @@ namespace WhetherU
                     getGreeting();
 
                 }
-                else
-                {
-                    //TODO:pull image from database for criteria
-
-                    SetContentView(Resource.Layout.weatherAPI);
-                    ImageView image = FindViewById<ImageView>(Resource.Id.imgAbsolute);
-                    image.SetImageResource(Resource.Drawable.main);
-                    runWeather("51.0114", "114.1288");
-
-
-                }
             }
+            else
+            {
+                //TODO:pull image from database for criteria
+
+                SetContentView(Resource.Layout.weatherAPI);
+                ImageView image = FindViewById<ImageView>(Resource.Id.imgAbsolute);
+                image.SetImageResource(Resource.Drawable.main);
+                image.SetScaleType(ScaleType.CenterCrop);
+                runWeather("51.0114", "114.1288");
+
+
+            }
+            
             
 
         // Set our view from the "main" layout resource
@@ -120,13 +129,7 @@ namespace WhetherU
 
             //button.Click += Button_Click;
 
-            ImageButton demo = FindViewById<ImageButton>(Resource.Id.demoMenu);
-            demo.Click += delegate
-            {
-                Intent intent = new Intent(this.ApplicationContext, typeof(DemoMenuActivity));
-                intent.SetFlags(ActivityFlags.NewTask);
-                StartActivity(intent);
-            };
+            
         }
 
         private void setInstagramImages()
